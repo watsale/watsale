@@ -403,12 +403,8 @@
 
 /* Growth Partner Plan */
 .growth-plan-box {
-  /* background: linear-gradient(
-    to right,
-    #f3e8ff,
-    #fce7f3
-  );  */
   padding: 2rem;
+  border-color: rgba(20, 193, 98, 0.2) !important;
   border-radius: 1rem;
 }
 
