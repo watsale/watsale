@@ -360,48 +360,56 @@
         >
           <div class="row mb-0">
             <!-- Input Card -->
-            <div class="col-xl-6">
+            <div class="col-xl-5">
               <div class="">
                 <div class="card-body p-4">
                   <div class="card-title mb-4">
-                    <h3 class="fw-bold mb-3 fs-5 text-dark-emphasis">
+                    <h3 class="fw-bold mb-3 fs-6 text-dark-emphasis">
                       <i class="fa-solid fa-calculator me-2"></i> Your Business
                       Metrics
                     </h3>
                   </div>
                   <form id="roiForm" class="row g-3">
                     <div class="col-12">
-                      <label class="form-label">Monthly Website Visitors</label>
+                      <label
+                        class="form-label text-dark-emphasis fw-semibold"
+                        style="font-size: 14px"
+                        >Monthly Website Visitors</label
+                      >
                       <input
                         type="number"
                         name="visitors"
-                        class="form-control"
+                        class="form-control border-success-soft"
                         value="1000"
                         id="visitors"
                       />
                     </div>
 
                     <div class="col-12">
-                      <label class="form-label"
+                      <label
+                        class="form-label text-dark-emphasis fw-semibold"
+                        style="font-size: 14px"
                         >Current Conversion Rate (%)</label
                       >
                       <input
                         type="number"
                         name="conversion_rate"
-                        class="form-control"
+                        class="form-control border-success-soft"
                         value="2.5"
                         id="conversion_rate"
                       />
                     </div>
 
                     <div class="col-12">
-                      <label class="form-label"
+                      <label
+                        class="form-label text-dark-emphasis fw-semibold"
+                        style="font-size: 14px"
                         >Average Order Value (AED)</label
                       >
                       <input
                         type="number"
                         name="aov"
-                        class="form-control"
+                        class="form-control border-success-soft"
                         value="100"
                         id="aov"
                         required
@@ -415,28 +423,32 @@
                     </div>
 
                     <div class="col-12">
-                      <label class="form-label"
+                      <label
+                        class="form-label text-dark-emphasis fw-semibold"
+                        style="font-size: 14px"
                         >Monthly Ad Spend (AED)
                         <span class="text-muted">(Optional)</span></label
                       >
                       <input
                         type="number"
                         name="ad_spend"
-                        class="form-control"
+                        class="form-control border-success-soft"
                         value="5000"
                         id="ad_spend"
                       />
                     </div>
 
                     <div class="col-12">
-                      <label class="form-label"
+                      <label
+                        class="form-label text-dark-emphasis fw-semibold"
+                        style="font-size: 14px"
                         >Cost per Acquisition (CAC)
                         <span class="text-muted">(Optional)</span></label
                       >
                       <input
                         type="number"
                         name="cac"
-                        class="form-control"
+                        class="form-control border-success-soft"
                         value=""
                         id="cac"
                       />
@@ -453,71 +465,77 @@
             </div>
 
             <!-- Results Card -->
-            <div class="col-xl-6">
+            <div class="col-xl-7">
               <div class="rounded-4 arp-results border-success-soft mb-0">
                 <div class="card-body p-4" id="roi-results">
                   <div class="card-title mb-4">
-                    <h3 class="fw-bold mb-3 fs-5 text-dark-emphasis">
+                    <h3 class="fw-bold mb-3 fs-6 text-dark-emphasis">
                       <i class="fa-solid fa-chart-line me-2"></i> Your Average
                       Revenue Projection
                     </h3>
                   </div>
                   <div class="row g-3 mb-4">
-                    <div class="col-sm-6">
-                      <div class="bg-light p-3 rounded text-center">
-                        <div class="text-muted small">
-                          Average Monthly Revenue
-                          <br />
-                          (Current)
-                        </div>
-                        <div class="fw-bold fs-5" id="currentSales">AED 0</div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="bg-success-soft p-3 rounded text-center">
-                        <div class="text-success small">
-                          Average Monthly Revenue
-                          <br />
-                          (With Watsale)
-                        </div>
-                        <div
-                          class="fw-bold fs-5 text-success"
-                          id="improvedSales"
-                        >
-                          AED 0
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <ol class="list-group mb-4">
-                    <li
-                      id="lossAlert"
-                      class="list-group-item text-danger text-center border-0 mb-3"
-                    >
-                      <!-- You Are Currently Running At Loss On Ads Spend -->
-                    </li>
-                    <!-- <li
-                      class="list-group-item d-flex justify-content-between border-1"
-                    >
-                      <span>Average Annual Uplift</span>
-                      <strong class="text-success" id="extraRevenue"
-                        >AED 0</strong
+                    <div class="col-sm-12">
+                      <div
+                        class="text-muted fw-semibold"
+                        style="font-size: small"
                       >
-                    </li> -->
-                    <li class="list-group-item d-flex justify-content-between">
-                      <span>Aprox Average Improvement</span>
-                      <strong class="text-success" id="roi">0%</strong>
-                    </li>
-                  </ol>
-
-                  <div
-                    class="bg-success-soft text-dark-emphasis text-center rounded p-4 mb-4"
-                  >
-                    <small class="opacity-75 d-block"
-                      >Projected Annual Extra Revenue</small
-                    >
-                    <div class="fw-bold fs-4 mt-1" id="annualExtra">AED 0</div>
+                        Average Monthly Revenue (Current)
+                      </div>
+                      <div class="fw-bold fs-5" id="currentSales">AED 0</div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div
+                        class="text-success fw-semibold"
+                        style="font-size: small"
+                      >
+                        Average Monthly Revenue (With Watsale)
+                      </div>
+                      <div class="fw-bold fs-2 text-success" id="improvedSales">
+                        AED 0
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div
+                        class="text-dark-emphasis fw-semibold"
+                        style="font-size: small"
+                      >
+                        Aprox Average Improvement
+                      </div>
+                      <div class="fw-bold fs-2 text-success-custom" id="roi">
+                        0%
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div
+                        class="text-success-custom fw-semibold"
+                        style="font-size: small"
+                      >
+                        Projected Annual Extra Revenue
+                      </div>
+                      <div
+                        class="fw-bold fs-1 text-success-custom"
+                        id="annualExtra"
+                      >
+                        AED 0
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="mb-4 bg-transparent">
+                        <p id="lossAlert" class="text-danger text-center">
+                          <!-- You Are Currently Running At Loss On Ads Spend -->
+                        </p>
+                        <p>
+                          Spending <span id="spendAmount"></span> to make back
+                          <span id="currentRevenue"></span>?
+                          <br />
+                          With Watsale’s flows, you could be generating
+                          <span id="monthlyRevenueWatsale"></span>/month —
+                          that’s <span id="yearlyRevenueWatsale"></span>/year in
+                          unlocked profit.
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
                   <div class="d-grid gap-2">

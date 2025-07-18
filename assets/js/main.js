@@ -103,18 +103,12 @@ $(document).ready(function () {
     $("#roi").text(`${percentage.toFixed(2)}%`);
     $("#annualExtra").text(`AED ${performance.toFixed(2)}`);
 
-    const currentPerformance = finalAdSpend - currentRevenue;
-
-    if (currentPerformance > 0) {
-      $("#lossAlert").fadeIn(500);
-      $("#lossAlert").text(
-        `You Are Currently Spending AED ${finalAdSpend.toFixed(
-          0
-        )} To Generate AED ${currentRevenue.toFixed(0)}.!!`
-      );
-    } else {
-      $("#lossAlert").fadeOut(500);
-    }
+    $("#spendAmount").text(`AED ${finalAdSpend.toFixed(0)}`);
+    $("#currentRevenue").text(`AED ${currentRevenue.toFixed(0)}`);
+    $("#monthlyRevenueWatsale").text(
+      `AED ${totalMonthlyRevenueUplift.toFixed(0)}`
+    );
+    $("#yearlyRevenueWatsale").text(`AED ${performance.toFixed(0)}`);
   }
 
   $("#roiForm input").on("input", calculateROI);
