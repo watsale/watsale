@@ -495,3 +495,10 @@ html {
   background-color: #14c162;
   border-color: #14c162;
 }
+
+/* ARP Calculator */
+
+.arp-results {
+  background: linear-gradient(to bottom right, #f9fafb, #f1f5f9);
+  border: 1px solid #14c162;
+}
