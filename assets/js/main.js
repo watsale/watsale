@@ -1,23 +1,48 @@
 $(document).ready(function () {
-  // Mutual disabling logic
-  $("#ad_spend").on("input", function () {
-    if ($(this).val()) {
-      $("#cac").prop("disabled", true);
-    } else {
-      $("#cac").prop("disabled", false);
-    }
-  });
+  const currencySymbols = {
+    AED: "AED ",
+    USD: "$",
+  };
 
-  $("#cac").on("input", function () {
-    if ($(this).val()) {
-      $("#ad_spend").prop("disabled", true);
+  let selectedCurrency = "USD";
+  const exchangeRates = {
+    AED: 1,
+    USD: 0.27,
+  };
+
+  function formatNumber(value) {
+    return new Intl.NumberFormat("en-US", {
+      maximumFractionDigits: 0,
+    }).format(value);
+  }
+
+  function formatCurrency(value) {
+    if (value == null || isNaN(value))
+      return `${currencySymbols[selectedCurrency]}0`;
+    const converted = value * (exchangeRates[selectedCurrency] || 1);
+    return `${currencySymbols[selectedCurrency]}${formatNumber(converted)}`;
+  }
+
+  $("input[name='currency']").on("change", function () {
+    selectedCurrency = $(this).val();
+    if (selectedCurrency === "USD") {
+      $("#aov").attr("placeholder", "Average Order Value (USD)");
+      $("#ad_spend").attr("placeholder", "Ad Spend (USD)");
+      $("#cac").attr("placeholder", "Customer Acquisition Cost (USD)");
+      $("#flowStackPrice").text("$549");
+      $(".growthLiftPrice").text("$4,999");
+      $("#flowStackProPrice").text("$999");
     } else {
-      $("#ad_spend").prop("disabled", false);
+      $("#aov").attr("placeholder", "Average Order Value (AED)");
+      $("#ad_spend").attr("placeholder", "Ad Spend (AED)");
+      $("#cac").attr("placeholder", "Customer Acquisition Cost (AED)");
+      $("#flowStackPrice").text("AED 1,999");
+      $(".growthLiftPrice").text("AED 18,399");
+      $("#flowStackProPrice").text("AED 3,699");
     }
   });
 
   function calculateROI() {
-    // Input values
     const visitors = parseFloat($("#visitors").val());
     const cr = parseFloat($("#conversion_rate").val()) / 100;
     const aov = parseFloat($("#aov").val());
@@ -27,56 +52,39 @@ $(document).ready(function () {
     const adSpend = adSpendRaw !== "" ? parseFloat(adSpendRaw) : null;
     const cac = cacRaw !== "" ? parseFloat(cacRaw) : null;
 
-    // Step 1: Current revenue
     const sales = visitors * cr;
     const currentRevenue = sales * aov;
 
-    // Step 2: WhatsApp chat sales (organic)
     const waLeads = visitors * 0.15;
     const waSales = waLeads * 0.05;
     const waRevenue = waSales * aov;
 
-    // Step 3: Cart recovery revenue
     const recoveredSales = visitors * 0.1 * 0.7 * 0.2;
     const recoveredRevenue = recoveredSales * aov;
 
-    // Step 4: Meta charges for WhatsApp
     const metaChatCharge = waLeads * 0.25;
     const metaRecoveryCharge = recoveredSales * 0.04;
     const totalMetaOrganic = metaChatCharge + metaRecoveryCharge;
 
-    // Step 5: Paid campaign projections
     let paidWaRevenue = 0;
     let paidMetaCharge = 0;
     let finalAdSpend = 0;
 
     if (adSpend !== null && !isNaN(adSpend)) {
       finalAdSpend = adSpend;
-
-      // Estimate number of clicks (clicks = totalAdSpend / costPerClick;)
       const clicks = finalAdSpend / 2.5;
-
-      // Estimate WhatsApp sales from paid traffic
       const paidWaSales = clicks * 0.07;
-
       paidWaRevenue = paidWaSales * aov;
       paidMetaCharge = paidWaSales * 0.25;
     } else if (cac !== null && !isNaN(cac)) {
-      // Estimate # of paid conversions from existing visitor flow
       const paidSales = visitors * cr;
-
-      // Estimate how much ad spend is required to acquire those sales
       finalAdSpend = paidSales * cac;
-
-      // Simulate clicks and WhatsApp conversion from this spend
       const clicks = finalAdSpend / 2.5;
       const paidWaSales = clicks * 0.07;
-
       paidWaRevenue = paidWaSales * aov;
       paidMetaCharge = paidWaSales * 0.25;
     }
 
-    // Step 6: Totals
     const totalMonthlyRevenueUplift =
       waRevenue + recoveredRevenue + paidWaRevenue + currentRevenue;
 
@@ -84,32 +92,35 @@ $(document).ready(function () {
     const watsaleCostMonth = watsaleCost / 12;
     const totalCost =
       totalMetaOrganic + paidMetaCharge + finalAdSpend + watsaleCostMonth;
+
     const netAnnualUplift = totalMonthlyRevenueUplift * 12 - totalCost * 12;
-
     const totalAverageAnnualRevenueUplift = totalMonthlyRevenueUplift * 12;
-
     const oldAnnualRevenue = currentRevenue * 12;
-
     const performance = totalAverageAnnualRevenueUplift - oldAnnualRevenue;
-
     const percentage = (performance / oldAnnualRevenue) * 100;
 
-    // Update DOM
-    $("#currentSales").text(`AED ${currentRevenue.toFixed(2)}`);
-    $("#improvedSales").text(`AED ${totalMonthlyRevenueUplift.toFixed(2)}`);
-    $("#extraRevenue").text(
-      `AED ${totalAverageAnnualRevenueUplift.toFixed(2)}`
-    );
-    $("#roi").text(`${percentage.toFixed(2)}%`);
-    $("#annualExtra").text(`AED ${performance.toFixed(2)}`);
-
-    $("#spendAmount").text(`AED ${finalAdSpend.toFixed(0)}`);
-    $("#currentRevenue").text(`AED ${currentRevenue.toFixed(0)}`);
-    $("#monthlyRevenueWatsale").text(
-      `AED ${totalMonthlyRevenueUplift.toFixed(0)}`
-    );
-    $("#yearlyRevenueWatsale").text(`AED ${performance.toFixed(0)}`);
+    $("#currentSales").text(formatCurrency(currentRevenue));
+    $("#improvedSales").text(formatCurrency(totalMonthlyRevenueUplift));
+    $("#extraRevenue").text(formatCurrency(totalAverageAnnualRevenueUplift));
+    if (performance <= 0 || isNaN(performance)) {
+      $("#roi").text("0%");
+    } else {
+      $("#roi").text(`${percentage.toFixed(2)}%`);
+    }
+    $("#annualExtra").text(formatCurrency(performance));
+    $("#spendAmount").text(formatCurrency(finalAdSpend));
+    $("#currentRevenue").text(formatCurrency(currentRevenue));
+    $("#monthlyRevenueWatsale").text(formatCurrency(totalMonthlyRevenueUplift));
+    $("#yearlyRevenueWatsale").text(formatCurrency(performance));
   }
+
+  $("#ad_spend").on("input", function () {
+    $("#cac").prop("disabled", !!$(this).val());
+  });
+
+  $("#cac").on("input", function () {
+    $("#ad_spend").prop("disabled", !!$(this).val());
+  });
 
   $("#roiForm input").on("input", calculateROI);
 

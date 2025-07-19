@@ -324,7 +324,7 @@
     <section class="py-5 bg-primary-custom">
       <div class="container">
         <!-- Header -->
-        <div class="text-center mb-5">
+        <div class="text-center mb-4">
           <h2 class="fw-bold mb-3 fs-2 text-dark-emphasis">
             See How Much You Could Be
             <span class="text-success-custom fw-bold">
@@ -354,6 +354,43 @@
             >
             based on industry average benchmarks on GCC region.
           </p>
+        </div>
+
+        <div class="d-flex justify-content-center mb-4">
+          <div
+            class="btn-group currency-toggle bg-body-secondary d-flex gap-1 p-1 rounded-pill"
+            role="group"
+            aria-label="Currency Toggle"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="currency"
+              id="usd"
+              autocomplete="off"
+              value="USD"
+              checked
+            />
+            <label
+              class="btn btn-outline-violet rounded-pill border-0 fw-semibold"
+              for="usd"
+              >USD</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="currency"
+              id="aed"
+              autocomplete="off"
+              value="AED"
+            />
+            <label
+              class="btn btn-outline-violet rounded-pill border-0 fw-semibold"
+              for="aed"
+              >AED</label
+            >
+          </div>
         </div>
 
         <div
@@ -414,6 +451,7 @@
                         class="form-control border-success-soft text-dark-emphasis"
                         value="100"
                         id="aov"
+                        placeholder="Enter Average Order Value (USD)"
                         required
                       />
                       <small
@@ -435,6 +473,7 @@
                         name="ad_spend"
                         class="form-control border-success-soft text-dark-emphasis"
                         value="5000"
+                        placeholder="Enter Ad Spend (USD)"
                         id="ad_spend"
                       />
                     </div>
@@ -458,6 +497,7 @@
                         name="cac"
                         class="form-control border-success-soft text-dark-emphasis"
                         value=""
+                        placeholder="Enter Customer Acquisition Cost (USD)"
                         id="cac"
                       />
                       <small
@@ -596,32 +636,6 @@
         class="growth-plan-box card bg-white shadow"
         style="max-width: 900px; margin: auto"
       >
-        <div class="d-flex justify-content-end mb-4">
-          <div
-            class="btn-group currency-toggle"
-            role="group"
-            aria-label="Currency Toggle"
-          >
-            <input
-              type="radio"
-              class="btn-check"
-              name="currency"
-              id="usd"
-              autocomplete="off"
-              checked
-            />
-            <label class="btn btn-outline-violet" for="usd">USD</label>
-
-            <input
-              type="radio"
-              class="btn-check"
-              name="currency"
-              id="aed"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-violet" for="aed">AED</label>
-          </div>
-        </div>
         <h3
           class="text-success-custom"
           style="
@@ -629,7 +643,6 @@
             font-size: 1.5rem;
             font-weight: bold;
             margin-bottom: 2rem;
-            margin-top: -1.5rem;
           "
         >
           WhatsApp ChatCommerce System
@@ -694,7 +707,8 @@
             <div class="growth-option shadow" style="margin-bottom: 4rem">
               <div class="growth-plan-box bg-white p-3 rounded-3 border-0">
                 <div class="price text-dark-emphasis">
-                  Flowstack™ - $549/month
+                  Flowstack™ -
+                  <span id="flowStackPrice" class="fw-bold">$549</span>/month
                 </div>
                 <div class="note">20% Off On Annual Billing</div>
               </div>
@@ -710,7 +724,8 @@
                 +
               </p>
               <div class="price text-success-custom">
-                GrowthLift™ - $4,999/month
+                GrowthLift™ -
+                <span id="" class="fw-bold growthLiftPrice">$4,999</span>/month
               </div>
               <div class="note">20% Off On Annual Billing</div>
             </div>
@@ -745,7 +760,8 @@
                 +
               </p>
               <div class="price text-success-custom">
-                GrowthLift™ - $4,999/month
+                GrowthLift™ -
+                <span id="" class="fw-bold growthLiftPrice">$4,999</span>/month
               </div>
               <div class="note">20% Off On Annual Billing</div>
             </div>
