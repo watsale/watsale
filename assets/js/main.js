@@ -5,10 +5,6 @@ $(document).ready(function () {
   };
 
   let selectedCurrency = "USD";
-  const exchangeRates = {
-    AED: 1,
-    USD: 0.27,
-  };
 
   function formatNumber(value) {
     return new Intl.NumberFormat("en-US", {
@@ -19,12 +15,12 @@ $(document).ready(function () {
   function formatCurrency(value) {
     if (value == null || isNaN(value))
       return `${currencySymbols[selectedCurrency]}0`;
-    const converted = value * (exchangeRates[selectedCurrency] || 1);
-    return `${currencySymbols[selectedCurrency]}${formatNumber(converted)}`;
+    return `${currencySymbols[selectedCurrency]}${formatNumber(value)}`;
   }
 
   $("input[name='currency']").on("change", function () {
     selectedCurrency = $(this).val();
+    calculateROI();
     if (selectedCurrency === "USD") {
       $("#aov").attr("placeholder", "Average Order Value (USD)");
       $("#ad_spend").attr("placeholder", "Ad Spend (USD)");
@@ -52,6 +48,15 @@ $(document).ready(function () {
     const adSpend = adSpendRaw !== "" ? parseFloat(adSpendRaw) : null;
     const cac = cacRaw !== "" ? parseFloat(cacRaw) : null;
 
+    const isUSD = selectedCurrency === "USD";
+
+    // Cost per click
+    const costPerClick = isUSD ? 0.68 : 2.5;
+    // Meta chat charges
+    const metaChatRate = isUSD ? 0.068 : 0.25;
+    const metaRecoveryRate = isUSD ? 0.011 : 0.04;
+    const paidMetaRate = isUSD ? 0.068 : 0.25;
+
     const sales = visitors * cr;
     const currentRevenue = sales * aov;
 
@@ -62,8 +67,8 @@ $(document).ready(function () {
     const recoveredSales = visitors * 0.1 * 0.7 * 0.2;
     const recoveredRevenue = recoveredSales * aov;
 
-    const metaChatCharge = waLeads * 0.25;
-    const metaRecoveryCharge = recoveredSales * 0.04;
+    const metaChatCharge = waLeads * metaChatRate;
+    const metaRecoveryCharge = recoveredSales * metaRecoveryRate;
     const totalMetaOrganic = metaChatCharge + metaRecoveryCharge;
 
     let paidWaRevenue = 0;
@@ -72,23 +77,23 @@ $(document).ready(function () {
 
     if (adSpend !== null && !isNaN(adSpend)) {
       finalAdSpend = adSpend;
-      const clicks = finalAdSpend / 2.5;
+      const clicks = finalAdSpend / costPerClick;
       const paidWaSales = clicks * 0.07;
       paidWaRevenue = paidWaSales * aov;
-      paidMetaCharge = paidWaSales * 0.25;
+      paidMetaCharge = paidWaSales * paidMetaRate;
     } else if (cac !== null && !isNaN(cac)) {
       const paidSales = visitors * cr;
       finalAdSpend = paidSales * cac;
       const clicks = finalAdSpend / 2.5;
       const paidWaSales = clicks * 0.07;
       paidWaRevenue = paidWaSales * aov;
-      paidMetaCharge = paidWaSales * 0.25;
+      paidMetaCharge = paidWaSales * paidMetaRate;
     }
 
     const totalMonthlyRevenueUplift =
       waRevenue + recoveredRevenue + paidWaRevenue + currentRevenue;
 
-    const watsaleCost = 86987;
+    const watsaleCost = isUSD ? 71976 : 265176; // Annual cost in USD or AED
     const watsaleCostMonth = watsaleCost / 12;
     const totalCost =
       totalMetaOrganic + paidMetaCharge + finalAdSpend + watsaleCostMonth;
