@@ -520,3 +520,8 @@ footer a {
 footer a:hover {
   color: #14c162;
 }
+.accordion-button {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
