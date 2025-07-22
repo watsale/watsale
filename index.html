@@ -528,7 +528,7 @@
             <!-- Results Card -->
             <div class="col-xl-7">
               <div class="rounded-4 arp-results border-success-soft mb-0">
-                <div class="card-body p-4" id="roi-results">
+                <div class="card-body p-4 pb-0" id="roi-results">
                   <div class="card-title mb-4">
                     <h3 class="fw-bold mb-3 fs-6 text-dark-emphasis">
                       <i class="fa-solid fa-chart-line me-2"></i> Your Average
@@ -587,22 +587,21 @@
                       </div>
                     </div>
                   </div>
-
-                  <div class="d-grid gap-2">
-                    <a
-                      href="#strategy"
-                      class="btn btn-success-custom d-flex align-items-center justify-content-center gap-2 rounded-pill"
-                    >
-                      <i class="fa-regular fa-message"></i> Get Your Growth Map
-                      <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    <button
-                      class="btn btn-outline-success rounded-pill d-flex align-items-center justify-content-center gap-2"
-                    >
-                      <i class="fa-solid fa-download"></i> Download Results as
-                      PDF
-                    </button>
-                  </div>
+                </div>
+                <div class="d-grid gap-2 ps-4 pe-4 pb-4 pt-0">
+                  <a
+                    href="#strategy"
+                    class="btn btn-success-custom d-flex align-items-center justify-content-center gap-2 rounded-pill"
+                  >
+                    <i class="fa-regular fa-message"></i> Get Your Growth Map
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                  <button
+                    id="downloadPdf"
+                    class="btn btn-outline-success rounded-pill d-flex align-items-center justify-content-center gap-2"
+                  >
+                    <i class="fa-solid fa-download"></i> Download Results as PDF
+                  </button>
                 </div>
               </div>
             </div>
@@ -1054,6 +1053,8 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

@@ -130,4 +130,100 @@ $(document).ready(function () {
   $("#roiForm input").on("input", calculateROI);
 
   calculateROI();
+
+  // PDF Generation & Download Functionality
+  document.getElementById("downloadPdf").addEventListener("click", function () {
+    const target = document.getElementById("roi-results");
+
+    html2canvas(target, {
+      scale: 2,
+      useCORS: true,
+      backgroundColor: "#ffffff",
+    }).then((canvas) => {
+      const imgData = canvas.toDataURL("image/png");
+
+      const { jsPDF } = window.jspdf;
+      const pdf = new jsPDF("p", "mm", "a4");
+
+      const pageWidth = pdf.internal.pageSize.getWidth();
+      const pageHeight = pdf.internal.pageSize.getHeight();
+
+      // Brand Header
+      const logoUrl = "../../assets/img/logo.png";
+      const titleText = "Watsale | ARP Report";
+      const siteUrl = "www.watsale.com";
+
+      const marginX = 10;
+      const contentYStart = 35; // leave space for branding
+
+      // Add logo (async)
+      const imgProps = pdf.getImageProperties(imgData);
+      const contentWidth = pageWidth - 2 * marginX;
+      const contentHeight = (imgProps.height * contentWidth) / imgProps.width;
+
+      const currentDate = new Date();
+      const formattedDate = currentDate.toLocaleString("en-GB", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
+      // Load logo image and draw everything
+      const logo = new Image();
+      logo.crossOrigin = "anonymous";
+      logo.src = logoUrl;
+
+      logo.onload = () => {
+        const logoTargetWidth = 30; // desired width in mm
+
+        // Get original image dimensions
+        const imgRatio = logo.height / logo.width;
+        const logoWidth = logoTargetWidth;
+        const logoHeight = logoWidth * imgRatio;
+
+        const centerX = pageWidth / 2;
+        const logoX = centerX - logoWidth / 2;
+
+        pdf.addImage(logo, "PNG", logoX, 10, logoWidth, logoHeight);
+
+        // Title just below logo
+        const titleText = "Watsale | ARP Report";
+        pdf.setFont("helvetica", "bold"); // or use 'times', 'courier', etc.
+        pdf.setFontSize(12);
+        pdf.setTextColor("#333333");
+
+        const textWidth = pdf.getTextWidth(titleText);
+        const textX = centerX - textWidth / 2;
+
+        const titleY = 10 + logoHeight + 5; // 5mm below logo
+        pdf.text(titleText, textX, titleY);
+
+        // Content area starts after header
+        const contentYStart = titleY + 10;
+
+        pdf.addImage(
+          imgData,
+          "PNG",
+          marginX,
+          contentYStart,
+          contentWidth,
+          contentHeight
+        );
+
+        // Footer
+        pdf.setFontSize(9);
+        pdf.setTextColor("#999999");
+        pdf.text(`Generated on ${formattedDate}`, marginX, pageHeight - 10);
+        pdf.text(`${siteUrl}`, pageWidth - marginX - 40, pageHeight - 10);
+
+        pdf.save("Watsale_ARP_Report.pdf");
+      };
+
+      logo.onerror = () => {
+        alert("Failed to load logo image for PDF export.");
+      };
+    });
+  });
 });
