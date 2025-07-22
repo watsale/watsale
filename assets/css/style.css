@@ -279,12 +279,6 @@ html {
   transform: translateX(-50%);
 }
 
-/* .bg-pattern {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KPGcgZmlsbD0iIzE0YzE2MiIgZmlsbC1vcGFjaXR5PSIwLjEiPgo8Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+CjwvZz4KPC9nPgo8L3N2Zz4=");
-  background-repeat: repeat;
-  background-size: 60px 60px;
-} */
-
 .text-success-custom {
   color: #14c162 !important;
 }
@@ -419,7 +413,7 @@ html {
 }
 
 .growth-option {
-  background: linear-gradient(to bottom right, #f9fafb, #f1f5f9);
+  /* background: linear-gradient(to bottom right, #f9fafb, #f1f5f9); */
   border: 1px solid #14c162;
   border-radius: 0.5rem;
   padding: 1rem;
@@ -517,4 +511,12 @@ html {
 input::placeholder {
   font-size: smaller;
   font-style: italic;
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+}
+footer a:hover {
+  color: #14c162;
 }
