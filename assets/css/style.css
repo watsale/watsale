@@ -525,3 +525,8 @@ footer a:hover {
   border: none !important;
   box-shadow: none !important;
 }
+.navbar-toggler {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
