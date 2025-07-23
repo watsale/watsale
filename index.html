@@ -561,7 +561,7 @@
 
             <!-- Results Card -->
             <div class="col-xl-7">
-              <div class="rounded-4 arp-results border-success-soft mb-0">
+              <div class="rounded-4 arp-results border-success-soft mb-0 h-100">
                 <div class="card-body p-4 pb-0" id="roi-results">
                   <div class="card-title mb-4">
                     <h3 class="fw-bold mb-3 fs-6 text-dark-emphasis">
@@ -609,10 +609,16 @@
                       </div>
                     </div>
                     <div class="col-sm-12 mb-0">
-                      <div class="mb-0 bg-transparent">
-                        <p class="text-muted small mb-0">
+                      <div class="mb-0 bg-transparent" id="ResultNote">
+                        <p class="text-muted small mb-1" id="adSpendNoteOne">
+                          You Are Now Generating
+                          <span class="currentRevenue"></span>.
+                        </p>
+                        <p class="text-muted small mb-1" id="adSpendNoteTwo">
                           You Are Spending <span id="spendAmount"></span> to
-                          make <span id="currentRevenue"></span>. <br />
+                          make <span class="currentRevenue"></span>.
+                        </p>
+                        <p class="text-muted small mb-0">
                           With Watsale’s flows, you could be generating
                           <span id="monthlyRevenueWatsale"></span>/month -
                           that’s <span id="yearlyRevenueWatsale"></span>/year in

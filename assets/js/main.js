@@ -15,7 +15,27 @@ $(document).ready(function () {
   function formatCurrency(value) {
     if (value == null || isNaN(value))
       return `${currencySymbols[selectedCurrency]}0`;
+
     return `${currencySymbols[selectedCurrency]}${formatNumber(value)}`;
+  }
+
+  function updateRevenueUI(data) {
+    console.log(data);
+    if (
+      data.totalMonthlyRevenueUplift === 0 ||
+      isNaN(data.totalMonthlyRevenueUplift)
+    ) {
+      $("#ResultNote").fadeOut(300);
+    } else {
+      $("#ResultNote").fadeIn(300);
+      if (data.finalAdSpend === 0 || isNaN(data.finalAdSpend)) {
+        $("#adSpendNoteOne").fadeIn(300);
+        $("#adSpendNoteTwo").fadeOut(300);
+      } else {
+        $("#adSpendNoteOne").fadeOut(300);
+        $("#adSpendNoteTwo").fadeIn(300);
+      }
+    }
   }
 
   $("input[name='currency']").on("change", function () {
@@ -114,9 +134,11 @@ $(document).ready(function () {
     }
     $("#annualExtra").text(formatCurrency(performance));
     $("#spendAmount").text(formatCurrency(finalAdSpend));
-    $("#currentRevenue").text(formatCurrency(currentRevenue));
+    $(".currentRevenue").text(formatCurrency(currentRevenue));
     $("#monthlyRevenueWatsale").text(formatCurrency(totalMonthlyRevenueUplift));
     $("#yearlyRevenueWatsale").text(formatCurrency(performance));
+
+    updateRevenueUI({ totalMonthlyRevenueUplift, finalAdSpend });
   }
 
   $("#ad_spend").on("input", function () {
