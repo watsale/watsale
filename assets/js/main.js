@@ -20,7 +20,6 @@ $(document).ready(function () {
   }
 
   function updateRevenueUI(data) {
-    console.log(data);
     if (
       data.totalMonthlyRevenueUplift === 0 ||
       isNaN(data.totalMonthlyRevenueUplift)
@@ -31,9 +30,11 @@ $(document).ready(function () {
       if (data.finalAdSpend === 0 || isNaN(data.finalAdSpend)) {
         $("#adSpendNoteOne").fadeIn(300);
         $("#adSpendNoteTwo").fadeOut(300);
+        $("#withAds").fadeOut(300);
       } else {
         $("#adSpendNoteOne").fadeOut(300);
         $("#adSpendNoteTwo").fadeIn(300);
+        $("#withAds").fadeIn(300);
       }
     }
   }
