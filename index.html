@@ -25,48 +25,51 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-blur fixed-top">
-      <div class="container pe-md-5 ps-md-5">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <div class="">
-            <img src="./assets/img/logo.png" alt="" width="140" />
-          </div>
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light-subtle shadow-sm fixed-top"
+    >
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="./assets/img/logo.webp" alt="Logo" width="150" />
         </a>
 
+        <!-- Hamburger Button -->
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#mainNav"
-          aria-controls="mainNav"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-          <ul class="navbar-nav align-items-center mb-2 mb-lg-0">
+        <!-- Navigation Links -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="/#features">Features</a>
+              <a class="nav-link active" href="#">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="/#plans">Pricing</a>
+              <a class="nav-link" href="#">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="/#faqs">FAQs</a>
+              <a class="nav-link" href="#">FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="/#consultation"
-                >Contact</a
-              >
+              <a class="nav-link" href="#">Contact</a>
             </li>
-            <li class="nav-item ms-lg-3">
-              <a
-                class="btn btn-cta pe-4 ps-4 pt-1 pb-1"
-                target="_blank"
-                href="https://panel.watsale.com/signin"
+            <li
+              class="nav-item ms-md-3 d-md-flex justify-content-center align-items-center mt-3 mt-md-0"
+            >
+              <a href="#" class="btn custom-cta fs-6 p-3 pt-1 pb-1 fw-semibold"
                 >Login</a
               >
             </li>
@@ -75,1465 +78,433 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section py-5 px-3 px-sm-4 px-lg-5">
+    <!-- Hero  -->
+    <section id="hero">
       <div class="p-5"></div>
-      <div class="container text-center pe-0 ps-0 pe-md-5 ps-md-5">
-        <div class="mx-auto pe-0 ps-0 pe-md-5 ps-md-5">
-          <h1 class="fw-bold mb-4 px-2 display-5 text-dark-emphasis">
-            Stop Losing Sales
-            <span class="text-success-custom fw-bold"
-              >You Already Paid For</span
-            >
-          </h1>
-
-          <p class="lead mb-3 text-body-secondary px-3 px-md-5">
-            Watsale Chat Commerce System™ turns WhatsApp into your store’s most
-            profitable sales channel - without adding work, tools, or team.
-            Built for growth-focused e-commerce brands doing $50K+/month on
-            Shopify, WooCommerce, or Ecwid
-          </p>
-
-          <p class="mb-4 fw-medium text-muted px-3">
-            Starting From
-            <span class="fw-semibold text-success-custom">$549/Month</span> -
-            <a href="/#plans" class="text-muted text-decoration-none"
-              >See Pricing
-            </a>
-          </p>
-
-          <div class="d-md-flex justify-content-center px-3 gap-4">
-            <div class="d-block mb-4 mb-md-0">
-              <a
-                href="https://wa.me/+971505052415"
-                class="btn btn-success-custom d-flex align-items-center justify-content-center shadow-lg gap-2 px-5 py-2 text-white rounded-pill text-decoration-none mb-2"
-              >
-                <i class="fa-solid fa-magnifying-glass-chart"></i>
-                <span class="fw-medium">Attend AI Scale Audit™</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
-              <span
-                class="text-success-custom fw-semibold"
-                style="font-size: small"
-                >See Your Personalized Growth Map
-              </span>
-            </div>
-            <div class="d-block">
-              <a
-                href="/#arp-calculator"
-                class="btn btn-success-custom d-flex align-items-center justify-content-center shadow-lg gap-2 px-5 py-2 text-white rounded-pill text-decoration-none mb-2"
-              >
-                <i class="fa-solid fa-calculator"></i>
-                <span class="fw-medium">Try ARP Calculator™</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
-              <span
-                class="text-success-custom fw-semibold"
-                style="font-size: small"
-                >See What You’re Leaving Behind</span
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-5">
-          <div class="mx-auto p-4">
-            <div class="row">
-              <div class="col-12">
-                <p class="text-dark">
-                  Most e-commerce brands in the GCC are quietly leaking revenue
-                  every day.
-                </p>
-                <p class="text-muted small">
-                  <span class="fw-bold text-success-custom">
-                    Your store has: </span
-                  >A solid product, Consistent traffic, But conversion, AOV, and
-                  retention?
-                  <span class="fw-bold text-dark-emphasis">
-                    Still flat. Still frustrating.
-                  </span>
-                </p>
-
-                <p class="text-muted">
-                  You’ve tried more ads, discounts, CRMs, plugins…
-                </p>
-                <p class="text-muted">
-                  Meanwhile, WhatsApp - where your customers actually live - is
-                  ignored or mismanaged.
-                </p>
-                <p class="fw-semibold text-success-custom">
-                  Watsale installs a high-converting revenue engine on top of
-                  your store - with zero friction.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="how-it-works py-5 bg-light">
-      <div class="container pe-md-5 ps-md-5">
-        <div class="text-center mb-5 px-3">
-          <h2 class="fw-bold mb-3 fs-2 text-dark-emphasis">
-            Let’s Help You Stop Losing What
-            <span class="text-success-custom fw-bold"> You Already Earned</span>
-          </h2>
-          <p class="lead text-muted">
-            See If This Is Right For You, What You’ll Get, And How It Works - In
-            Plain Terms.
-          </p>
-        </div>
-
-        <div
-          class="row gx-4 gy-5 justify-content-center position-relative mb-5"
-        >
-          <!-- Who Watsale Is For -->
-          <div class="col-12 col-lg-4 position-relative">
-            <div
-              class="card h-100 shadow border border-success-soft rounded-4 p-4"
-            >
-              <div
-                class="d-flex justify-content-between align-items-start mb-3"
-              ></div>
-              <h3 class="fs-5 fw-bold mb-2 text-success-custom">
-                Who Watsale Is For
-              </h3>
-              <p class="text-muted small mb-2">
-                Watsale is built for ecommerce brands doing $50K+/month with
-                40%+ margins - but still losing revenue they already paid to
-                earn.
+      <div class="pt-5 pb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <p class="fs-1">
+                Stop Losing Sales
+                <br />
+                <span class="fs-1 fw-bold"> You Already Paid For </span>
+                <br />
+                Built for D2C Shopify Stores
               </p>
-              <p class="text-muted small fst-italic">
-                You’ve got traffic. You’ve got product-market fit. But you're
-                still facing:
+              <p class="" style="max-width: 500px">
+                Watsale’s ChatCommerce system helps you follow up faster,
+                recover lost sales, and turn WhatsApp chats into real revenue -
+                no tech skills needed.
               </p>
-              <ul class="text-muted small ps-0 mb-2" style="list-style: none">
-                <li>Abandoned Carts And Dropped Conversations</li>
-                <li>A Low Conversion Rate Despite Good Traffic</li>
-                <li>Rising Customer Acquisition Costs (CAC)</li>
-                <li>Unpredictable ROAS On Paid Campaigns</li>
-                <li>
-                  Manual Follow-ups, Scattered Tools, And Time-consuming Support
-                </li>
-              </ul>
-              <p class="text-muted small fst-italic">
-                If you're ready to automate sales, support, and campaign
-                execution - without hiring or overcomplicating - you're exactly
-                who we built this for.
-              </p>
-            </div>
-          </div>
-
-          <!-- What You Get -->
-          <div class="col-12 col-lg-4 position-relative">
-            <div
-              class="card h-100 shadow border border-success-soft rounded-4 p-4"
-            >
-              <div class="mb-3"></div>
-              <h3 class="fs-5 fw-bold mb-2 text-success-custom">
-                What You Get
-              </h3>
-              <p class="text-muted small fst-italic">
-                A Fully Managed ChatCommerce Growth System™ Built to:
-              </p>
-              <ul class="text-muted small ps-0 mb-2" style="list-style: none">
-                <li>
-                  Find sales leaks across your funnel - from abandoned carts to
-                  silent DMs
-                </li>
-                <li>
-                  Forecast missed revenue using real store metrics (not generic
-                  benchmarks)
-                </li>
-                <li>
-                  Launch & manage Click-to-WhatsApp (CTWA) ad campaigns for
-                  better ROAS
-                </li>
-                <li>
-                  Run high-converting retargeting flows that bring back missed
-                  buyers
-                </li>
-                <li>
-                  Automate sales, support, and campaigns - so your team doesn’t
-                  have to
-                </li>
-                <li>
-                  Recover lost revenue with behavior-based follow-ups & AI chat
-                </li>
-                <li>
-                  Keep optimizing in the background - so what works, scales
-                </li>
-              </ul>
-              <p class="fw-bold mb-2 small text-dark-emphasis">
-                Powered By Our Proprietary Stack:
-              </p>
-
-              <div class="d-flex flex-wrap gap-2 mb-4">
-                <span class="badge bg-purple-soft text-success-custom fw-medium"
-                  >AI Scale Audit™</span
+              <p class="fw-semibold">Starting at AED 499/m - See Pricing</p>
+              <br />
+              <div class="cta gap-4 d-flex">
+                <a href="#" class="btn custom-cta fs-5 fw-semibold"
+                  >Start AI Consultation</a
                 >
-                <span class="badge bg-purple-soft text-success-custom fw-medium"
-                  >ARP Calculator™</span
-                >
-                <span class="badge bg-purple-soft text-success-custom fw-medium"
-                  >Flowstack™</span
-                >
-                <span class="badge bg-purple-soft text-success-custom fw-medium"
-                  >Flowstack Pro™</span
-                >
-                <span class="badge bg-purple-soft text-success-custom fw-medium"
-                  >Flowstack Enterprise™</span
-                >
-                <span class="badge bg-purple-soft text-success-custom fw-medium"
-                  >GrowthLift™</span
+                <a href="#" class="btn custom-cta fs-5 fw-semibold"
+                  >Visit Demo Store</a
                 >
               </div>
-            </div>
-          </div>
-
-          <!-- How It Works -->
-          <div class="col-12 col-lg-4 position-relative">
-            <div
-              class="card h-100 shadow border border-success-soft rounded-4 p-4"
-            >
-              <div
-                class="d-flex justify-content-between align-items-start mb-3"
-              ></div>
-              <h3 class="fs-5 fw-bold mb-2 text-success-custom">
-                How It Works
-              </h3>
-              <p class="text-muted small">
-                A fast, focused rollout - from audit to execution.
-              </p>
-              <ul class="text-muted small ps-0 mb-2" style="list-style: none">
-                <li>
-                  Step 1 - Attend AI Scale Audit™ Uncover revenue leaks,
-                  automation gaps, and untapped growth potential.
-                </li>
-                <li>
-                  Step 2 - Get Your Growth Map A personalized strategy showing
-                  how WhatsApp can power sales, support, and retention - across
-                  infinite use cases.
-                </li>
-                <li>
-                  Step 3 - Confirm Plan & Onboard After choosing the right
-                  stack, onboarding begins with payment confirmation.
-                </li>
-                <li>
-                  Step 4 - Launch Your System Flows, bots, campaigns, and
-                  automations are set up and deployed.
-                </li>
-                <li>
-                  Step 5 - Test, Improve, Scale. <br />
-                  Performance is tracked, optimized, and scaled - with no extra
-                  tools or hires needed.
-                </li>
-              </ul>
-              <p class="text-muted small fst-italic">
-                Insight. Execution. Growth - fully managed, WhatsApp-first.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="text-center">
-          <p class="lead text-muted fw-semibold">
-            Want To See Your Growth Inside WhatsaApp?
-          </p>
-        </div>
-        <div
-          class="d-flex flex-column flex-sm-row justify-content-center align-content-center mb-3"
-        >
-          <a
-            href="https://wa.me/+971505052415"
-            class="btn btn-success-custom btn-lg px-5 py-2 d-flex align-items-center justify-content-center gap-2 rounded-pill text-white text-decoration-none"
-          >
-            <i class="fa-solid fa-magnifying-glass-chart fs-6"></i>
-            <span class="fw-medium fs-6">Try The AI Scale Audit™</span>
-            <i class="fa-solid fa-arrow-right fs-6"></i>
-          </a>
-        </div>
-        <div class="text-center" style="max-width: 720px; margin: auto">
-          <p class="text-muted">
-            Our AI System Audits Your Business Directly Inside WhatsApp -
-            Showing Missed Revenue, Automation Use Cases, and Your True Growth
-            Potential... In Real Time.
-          </p>
-          <p class="text-muted fs-6 text-success-custom fw-semibold">
-            No Cards Required. No Red Tape. Just Straight To The Point.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ARP Calculator Section -->
-    <section class="py-5 bg-primary-custom" id="arp-calculator">
-      <div class="container">
-        <!-- Header -->
-        <div class="text-center mb-4">
-          <h2 class="fw-bold mb-3 fs-2 text-dark-emphasis">
-            See How Much You Could Be
-            <span class="text-success-custom fw-bold">
-              Recovering with WhatsApp</span
-            >
-          </h2>
-          <p class="lead text-muted mx-auto" style="max-width: 720px">
-            Use our <b>ARP Calculator</b
-            ><span
-              style="
-                vertical-align: super;
-                font-size: x-small;
-                font-weight: 700;
-              "
-            >
-              TM</span
-            >
-            to see your store's growth potential with <b>Watsale</b
-            ><span
-              style="
-                vertical-align: super;
-                font-size: x-small;
-                font-weight: 700;
-              "
-            >
-              TM</span
-            >
-            based on industry average benchmarks on GCC region.
-          </p>
-        </div>
-
-        <div class="d-flex justify-content-center mb-4">
-          <div
-            class="btn-group currency-toggle bg-body-secondary d-flex gap-1 p-1 rounded-pill"
-            role="group"
-            aria-label="Currency Toggle"
-          >
-            <input
-              type="radio"
-              class="btn-check"
-              name="currency"
-              id="usd"
-              autocomplete="off"
-              value="USD"
-              checked
-            />
-            <label
-              class="btn btn-outline-violet rounded-pill border-0 fw-semibold"
-              for="usd"
-              >USD</label
-            >
-
-            <input
-              type="radio"
-              class="btn-check"
-              name="currency"
-              id="aed"
-              autocomplete="off"
-              value="AED"
-            />
-            <label
-              class="btn btn-outline-violet rounded-pill border-0 fw-semibold"
-              for="aed"
-              >AED</label
-            >
-          </div>
-        </div>
-
-        <div
-          class="card shadow rounded-4 p-4 border-success-soft"
-          style="max-width: 950px; margin: auto"
-        >
-          <div class="row mb-0">
-            <!-- Input Card -->
-            <div class="col-xl-5">
+              <br />
+              <br />
               <div class="">
-                <div class="card-body p-4">
-                  <div class="card-title mb-4">
-                    <h3 class="fw-bold mb-3 fs-6 text-success-custom">
-                      <i class="fa-solid fa-calculator me-2"></i> Your Business
-                      Metrics
-                    </h3>
-                  </div>
-                  <form id="roiForm" class="row g-3">
-                    <div class="col-12">
-                      <label
-                        class="form-label text-dark-emphasis"
-                        style="font-size: 14px"
-                        >Monthly Website Visitors</label
-                      >
-                      <input
-                        type="number"
-                        name="visitors"
-                        class="form-control border-success-soft text-dark-emphasis"
-                        value=""
-                        id="visitors"
-                        placeholder="Eg: 10,000 Per Month"
-                      />
-                    </div>
-
-                    <div class="col-12">
-                      <label
-                        class="form-label text-dark-emphasis"
-                        style="font-size: 14px"
-                        >Current Conversion Rate (%)</label
-                      >
-                      <input
-                        type="number"
-                        name="conversion_rate"
-                        class="form-control border-success-soft text-dark-emphasis"
-                        value=""
-                        id="conversion_rate"
-                        placeholder="Eg: 2.5%"
-                      />
-                    </div>
-
-                    <div class="col-12">
-                      <label
-                        class="form-label text-dark-emphasis"
-                        style="font-size: 14px"
-                        >Average Order Value</label
-                      >
-                      <input
-                        type="number"
-                        name="aov"
-                        class="form-control border-success-soft text-dark-emphasis"
-                        id="aov"
-                        placeholder="Enter Average Order Value (USD)"
-                        value=""
-                      />
-                      <small
-                        class="text-muted"
-                        style="font-size: 11px; font-style: italic"
-                      >
-                        AOV = Total Revenue / Number of Orders
-                      </small>
-                    </div>
-
-                    <div class="col-12">
-                      <label
-                        class="form-label text-dark-emphasis"
-                        style="font-size: 14px"
-                        >Monthly Ad Spend
-                      </label>
-                      <input
-                        type="number"
-                        name="ad_spend"
-                        class="form-control border-success-soft text-dark-emphasis"
-                        placeholder="Enter Ad Spend (USD)"
-                        value=""
-                        id="ad_spend"
-                      />
-                    </div>
-
-                    <div class="col-12 mt-1 mb-1 text-center">
-                      <small
-                        class="text-muted"
-                        style="font-size: 11px; font-style: italic"
-                        >OR</small
-                      >
-                    </div>
-
-                    <div class="col-12 mt-0">
-                      <label
-                        class="form-label text-dark-emphasis"
-                        style="font-size: 14px"
-                        >Cost per Acquisition (CAC)
-                      </label>
-                      <input
-                        type="number"
-                        name="cac"
-                        class="form-control border-success-soft text-dark-emphasis"
-                        value=""
-                        placeholder="Enter Customer Acquisition Cost (USD)"
-                        id="cac"
-                      />
-                      <small
-                        class="text-muted"
-                        style="font-size: 11px; font-style: italic"
-                      >
-                        CAC = Ad Spend ÷ Number of Customers Converted
-                      </small>
-                    </div>
-                  </form>
-                </div>
+                <p class="">Not Ready? Learn More</p>
               </div>
             </div>
-
-            <!-- Results Card -->
-            <div class="col-xl-7">
-              <div class="rounded-4 arp-results border-success-soft mb-0 h-100">
-                <div class="card-body p-4 pb-0" id="roi-results">
-                  <div class="card-title mb-4">
-                    <h3 class="fw-bold mb-3 fs-6 text-dark-emphasis">
-                      <i class="fa-solid fa-chart-line me-2"></i> Your Average
-                      Revenue Projection
-                    </h3>
-                  </div>
-                  <div class="row g-3 mb-4">
-                    <div class="col-sm-12">
-                      <div class="text-dark-emphasis" style="font-size: small">
-                        Average Monthly Revenue (Current)
-                      </div>
-                      <div
-                        class="text-dark-emphasis fw-bold fs-4"
-                        id="currentSales"
-                      >
-                        AED 0
-                      </div>
-                    </div>
-                    <div class="col-sm-12">
-                      <div class="text-success" style="font-size: small">
-                        Average Monthly Revenue (With Watsale)
-                      </div>
-                      <div class="fw-bold fs-2 text-success" id="improvedSales">
-                        AED 0
-                      </div>
-                    </div>
-                    <div class="col-sm-12">
-                      <div class="text-success-custom" style="font-size: small">
-                        Aprox Average Improvement
-                      </div>
-                      <div class="fw-bold fs-2 text-success-custom" id="roi">
-                        0%
-                      </div>
-                    </div>
-                    <div class="col-sm-12">
-                      <div class="text-success-custom" style="font-size: small">
-                        Projected Annual Extra Revenue
-                      </div>
-                      <div
-                        class="fw-bold fs-1 text-success-custom"
-                        id="annualExtra"
-                      >
-                        AED 0
-                      </div>
-                    </div>
-                    <div class="col-sm-12 mb-0">
-                      <div class="mb-0 bg-transparent" id="ResultNote">
-                        <p class="text-muted small mb-1" id="adSpendNoteOne">
-                          You Are Now Generating
-                          <span class="currentRevenue"></span>.
-                        </p>
-                        <p class="text-muted small mb-1" id="adSpendNoteTwo">
-                          You Are Spending
-                          <span class="fw-semibold" id="spendAmount"></span> to
-                          make <span class="currentRevenue fw-semibold"></span>.
-                        </p>
-                        <p class="text-muted small mb-0">
-                          With Watsale’s flows, you could be generating
-                          <span
-                            class="fw-semibold"
-                            id="monthlyRevenueWatsale"
-                          ></span
-                          >/month
-                          <span id="withAds" class="fw-semibold"
-                            >without increasing your ad spend</span
-                          >
-                          - that’s
-                          <span
-                            class="fw-semibold"
-                            id="yearlyRevenueWatsale"
-                          ></span
-                          >/year in unlocked profit.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="d-grid gap-2 ps-4 pe-4 pb-4 pt-0">
-                  <a
-                    href="https://wa.me/+971505052415"
-                    class="btn btn-success-custom d-flex align-items-center justify-content-center gap-2 rounded-pill"
-                  >
-                    <i class="fa-regular fa-message"></i> Get Your Growth Map
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                  <a
-                    href="https://wa.me/+971505052415"
-                    class="btn btn-outline-success rounded-pill d-flex align-items-center justify-content-center gap-2"
-                  >
-                    <i class="fa-regular fa-file-lines"></i>
-                    Get The Full Analysis
-                  </a>
-                </div>
+            <div class="col-md-5">
+              <div class="mx-auto text-center">
+                <img
+                  src="./assets/img/placeholder.webp"
+                  alt=""
+                  class="img-fluid"
+                />
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Disclaimer -->
-        <div class="text-start mt-5">
-          <p
-            class="small text-muted mx-auto"
-            style="max-width: 900px; font-size: 13px"
-          >
-            <strong>Disclaimer:</strong> The results shown are industry-based
-            estimates from WhatsApp automation and marketing strategies -
-            including Click-to-WhatsApp (CTW) ads, abandoned cart recovery, and
-            conversational flows. Your actual performance may vary depending on
-            your business niche, strategy, and consistency.
-            <strong>
-              To see similar outcomes, we recommend maintaining steady usage for
-              at least 12 months.</strong
-            >
-          </p>
-        </div>
       </div>
     </section>
 
-    <!-- Plans Overview -->
-    <section class="p-2 py-5 bg-primary-custom" id="plans">
-      <div class="container mb-5">
-        <!-- Headline -->
-        <div class="text-center mb-0">
-          <h2 class="fw-bold text-dark-emphasis mb-3 fs-2">
-            Explore Our <span class="text-success-custom fw-bold">Plans</span>
-          </h2>
-          <h3 class="fs-4 text-secondary mb-4">
-            How To Choose The Right Plan?
-          </h3>
-          <div class="text-muted lead ps-md-5 pe-md-5 fs-6">
-            <p>
-              Don’t worry - you don’t have to decide on your own. Once you
-              complete the AI Scale Audit™, we’ll suggest the right plan for you
-              based on where your business is now and where you want to go.
-              Simple. Clear. No guesswork.
+    <!-- How You'll Win -->
+    <section id="how-you-will-win">
+      <div class="p-5"></div>
+      <div class="container">
+        <div class="heading text-center mb-5">
+          <h2 class="fs-1">How You’ll Win With Watsale</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card p-3 border-0 bg-transparent how-card">
+              <div class="card-image">
+                <img
+                  src="./assets/img/placeholder.webp"
+                  class="img-thumbnail"
+                  alt=""
+                />
+              </div>
+              <div class="card-body ps-1 pe-0 pt-3">
+                <p class="fs-6">
+                  <span class="fw-semibold">Recover Lost Sales:</span> Follow up
+                  on abandoned carts instantly - with smart automations
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-3 border-0 bg-transparent how-card">
+              <div class="card-image">
+                <img
+                  src="./assets/img/placeholder.webp"
+                  class="img-thumbnail"
+                  alt=""
+                />
+              </div>
+              <div class="card-body ps-1 pe-0 pt-3">
+                <p class="fs-6">
+                  <span class="fw-semibold">WhatsApp Shopping:</span> Let
+                  customers browse and buy inside the chat. No more drop-offs.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-3 border-0 bg-transparent how-card">
+              <div class="card-image">
+                <img
+                  src="./assets/img/placeholder.webp"
+                  class="img-thumbnail"
+                  alt=""
+                />
+              </div>
+              <div class="card-body ps-1 pe-0 pt-3">
+                <p class="fs-6">
+                  <span class="fw-semibold">Auto-Reply With AI:</span> Handle
+                  common questions and take orders - 24/7, with OpenAI
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-3 border-0 bg-transparent how-card">
+              <div class="card-image">
+                <img
+                  src="./assets/img/placeholder.webp"
+                  class="img-thumbnail"
+                  alt=""
+                />
+              </div>
+              <div class="card-body ps-1 pe-0 pt-3">
+                <p class="fs-6">
+                  <span class="fw-semibold">Broadcast With Precision:</span>
+                  Send offers and updates to hundreds - without sounding
+                  robotic.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-3 border-0 bg-transparent how-card">
+              <div class="card-image">
+                <img
+                  src="./assets/img/placeholder.webp"
+                  class="img-thumbnail"
+                  alt=""
+                />
+              </div>
+              <div class="card-body ps-1 pe-0 pt-3">
+                <p class="fs-6">
+                  <span class="fw-semibold">Team Inbox + Routing:</span> One
+                  shared inbox. Smart assignment. No missed replies
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-3 border-0 bg-transparent how-card">
+              <div class="card-image">
+                <img
+                  src="./assets/img/placeholder.webp"
+                  class="img-thumbnail"
+                  alt=""
+                />
+              </div>
+              <div class="card-body ps-1 pe-0 pt-3">
+                <p class="fs-6">
+                  <span class="fw-semibold">Track Sales & Replies:</span> View
+                  performance with one simple dashboard. Know what’s working.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <p class="text-center custom-primary-text fw-semibold">
+              More Features - click here
             </p>
           </div>
         </div>
       </div>
+      <div class="p-3"></div>
+    </section>
 
-      <!-- Growth Partner Section -->
-      <div class="container">
-        <div class="row" style="max-width: 900px; margin: auto">
-          <div class="col-md-6">
+    <!-- Watsale Journey -->
+    <section id="watsale-journey" class="bg-shaded-violet">
+      <div class="p-5"></div>
+
+      <div class="container-fluid ps-0">
+        <div class="row">
+          <div
+            class="col-md-6 d-flex justify-content-center align-items-center mb-5 mb-md-0"
+          >
             <div
-              class="card rounded-3 bg-white rounded-3 growth-option p-0 shadow"
+              class="text-start side-title p-5"
+              style="height: max-content; width: 100%"
             >
-              <span
-                class="p-2 rounded-top-3 text-center bg-success-custom text-white fw-semibold"
-                style="font-size: small"
-                >For Small Teams or Early-Stage Brands</span
+              <h2
+                class="fw-bolder"
+                style="max-width: 450px; font-size: 60px; line-height: 80px"
               >
-              <div class="card-body">
-                <div class="p-2 text-center">
-                  <div class="growth-plan-box bg-light p-3 rounded-3">
-                    <div class="price text-dark-emphasis fw-bold">
-                      Flowstack™ -
-                      <span id="flowStackPrice" class="fw-bold">$549</span
-                      >/Month
-                    </div>
-                    <div class="note fst-italic" style="font-size: small">
-                      20% Off On Annual Billing
-                    </div>
-                  </div>
-                  <div
-                    class="note mt-2 text-dark-emphasis"
-                    style="font-size: 14px"
-                  >
-                    Standard Platform Setup, Automation Tools, And Basic
-                    Integrations
-                  </div>
-                  <p
-                    class="text-dark-emphasis"
-                    style="
-                      text-align: center;
-                      margin: 0.5rem 0;
-                      font-weight: 500;
-                      color: #6b7280;
-                    "
-                  >
-                    +
-                  </p>
-                  <div class="price text-success-custom fw-bold">
-                    GrowthLift™ -
-                    <span class="fw-bold growthLiftPrice">$4,999</span>/Month
-                  </div>
-                  <div class="note fst-italic" style="font-size: small">
-                    20% Off On Annual Billing
-                  </div>
-                  <div
-                    class="note mt-2 text-dark-emphasis"
-                    style="font-size: 14px"
-                  >
-                    Your Full-Service Execution Layer <br /><br />
-                  </div>
-                </div>
-                <div
-                  class="accordion accordion-flush"
-                  id="accordionFlushExample"
+                What your watsale journey looks like
+              </h2>
+            </div>
+          </div>
+          <div
+            class="col-md-6 d-flex justify-content-center align-items-center"
+          >
+            <div class="" style="height: max-content">
+              <div class="mb-5">
+                <h3 class="fs-5 fw-bold">GET YOUR FREE AI CONSULTATION</h3>
+                <p class="fs-5" style="max-width: 350px">
+                  We understand your store and suggest the right plan.
+                </p>
+              </div>
+              <div class="mb-5">
+                <h3 class="fs-5 fw-bold">CONNECT STORE + WHATSAPP</h3>
+                <p class="fs-5" style="max-width: 350px">
+                  Link your Shopify and WhatsApp account with our guidance
+                </p>
+              </div>
+              <div class="mb-5">
+                <h3 class="fs-5 fw-bold">SET UP SMART AUTOMATIONS</h3>
+                <p class="fs-5" style="max-width: 350px">
+                  Recover carts, send broadcasts, and route support chats.
+                </p>
+              </div>
+              <div class="mb-5">
+                <h3 class="fs-5 fw-bold">TRACK & IMPROVE RESULTS</h3>
+                <p class="fs-5" style="max-width: 350px">
+                  Monitor growth and optimize with real-time insights.
+                </p>
+              </div>
+              <div class="p-1"></div>
+              <div class="">
+                <a href="#" class="btn custom-cta fs-5 fw-semibold">
+                  Start AI Consultation
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-5"></div>
+    </section>
+
+    <!-- Everything You Need -->
+    <section id="everything">
+      <div class="p-5"></div>
+
+      <div class="container">
+        <div class="heading text-center mb-5">
+          <h2 class="fs-1">Everything You Need to Win</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card border-0 p-4">
+              <div class="card-image mb-5 position-relative">
+                <img
+                  src="./assets/img/placeholder.webp"
+                  alt=""
+                  class="img-fluid card-img-top"
+                />
+                <a
+                  href="#"
+                  class="btn custom-cta fs-5 p-5 pt-2 pb-2 fw-semibold position-absolute start-0"
                 >
-                  <div class="accordion-item">
-                    <h2
-                      class="accordion-header text-dark-emphasis"
-                      id="flush-headingOne"
-                    >
-                      <button
-                        class="text-center collapsed fs-6 fw-semibold text-success-custom bg-transparent border-0"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseOne"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseOne"
-                      >
-                        More Details +
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseOne"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="flush-headingOne"
-                      data-bs-parent="#accordionFlushExample"
-                    >
-                      <div class="accordion-body">
-                        <div class="feature-item card border-0 bg-transparent">
-                          <p
-                            class=""
-                            style="font-weight: 600; margin-bottom: 1rem"
-                          >
-                            Playground
-                          </p>
-                          <ul
-                            class=""
-                            style="list-style: none; padding-left: 0"
-                          >
-                            <li>Team Inbox & Multi-Agent Support</li>
-                            <li>Bulk Broadcasting</li>
-                            <li>AI Chatbots for Sales Automation</li>
-                            <li>WhatsApp Commerce & Shop Integration</li>
-                            <li>6000+ App Integrations</li>
-                            <li>GDPR-Compliant & Secure</li>
-                            <li>Advanced Performance Analytics</li>
-                            <li>Multilingual Support</li>
-                          </ul>
-                        </div>
-                        <div class="feature-item card border-0 bg-transparent">
-                          <p class="" style="font-weight: 600">Growth Layer</p>
-                          <ul
-                            class="text-start"
-                            style="list-style: none; padding-left: 0"
-                          >
-                            <li>Product catalog uploads & auto-sync</li>
-                            <li>Chatbot setup and optimization</li>
-                            <li>Broadcast flow design</li>
-                            <li>FAQ + product reply design</li>
-                            <li>Ongoing monthly improvements and support</li>
-                            <li>
-                              Meta (Click-to-WhatsApp) ads setup & management
-                            </li>
-                            <li>Weekly broadcast strategy & execution</li>
-                            <li>Campaign optimization</li>
-                            <li>Dedicated performance manager</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  Learn More
+                </a>
+              </div>
+              <div class="card-body p-0">
+                <h4 class="card-title">PROVEN CAMPAIGN TEMPLATES</h4>
+                <p class="card-text fs-5" style="max-width: 300px">
+                  Launch faster with pre-made flows and offers
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-0 p-4">
+              <div class="card-image mb-5 position-relative">
+                <img
+                  src="./assets/img/placeholder.webp"
+                  alt=""
+                  class="img-fluid card-img-top"
+                />
+                <a
+                  href="#"
+                  class="btn custom-cta fs-5 p-5 pt-2 pb-2 fw-semibold position-absolute start-0"
+                >
+                  Learn More
+                </a>
+              </div>
+              <div class="card-body p-0">
+                <h4 class="card-title">NO-CODE SETUP SUPPORT</h4>
+                <p class="card-text fs-5" style="max-width: 300px">
+                  We handle the tech - you focus on growth
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card border-0 p-4">
+              <div class="card-image mb-5 position-relative">
+                <img
+                  src="./assets/img/placeholder.webp"
+                  alt=""
+                  class="img-fluid card-img-top"
+                />
+                <a
+                  href="#"
+                  class="btn custom-cta fs-5 p-5 pt-2 pb-2 fw-semibold position-absolute start-0"
+                >
+                  Learn More
+                </a>
+              </div>
+              <div class="card-body p-0">
+                <h4 class="card-title">24/7 CUSTOMER SUPPORT</h4>
+                <p class="card-text fs-5" style="max-width: 300px">
+                  Always-on help, across all time zones
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="p-3 text-end">
+              <a href="#" class="btn custom-cta fs-5 p-5 pt-2 pb-2 fw-semibold">
+                Learn more
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-5"></div>
+    </section>
+
+    <!-- Faq -->
+    <section id="faq" class="bg-light">
+      <div class="p-5"></div>
+      <div class="container">
+        <div class="heading text-center mb-5">
+          <h2 class="fs-1">Questions? We’ve Got Answers</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-5">
+            <div class="custom-faq">
+              <div class="p-md-5">
+                <div class="question p-5">
+                  <h2 class="fw-semibold">Is this only for big stores?</h2>
+                </div>
+                <div class="answer p-5">
+                  <p class="fs-5">
+                    No. If you get traffic, Watsale helps - even if you’re small
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="card bg-white rounded-3 growth-option p-0 shadow">
-              <span
-                class="p-2 rounded-top-3 text-center bg-success-custom text-white fw-semibold"
-                style="font-size: small"
-                >For Growth-Ready Teams or Complex Setups</span
-              >
-              <div class="card-body">
-                <div class="p-2 text-center">
-                  <div class="growth-plan-box bg-light p-3 rounded-3 border-0">
-                    <div class="price text-dark-emphasis fw-bold">
-                      Flowstack Pro™ -
-                      <span id="flowStackProPrice" class="fw-bold">$999</span
-                      >/Month
-                    </div>
-                    <div class="note fst-italic" style="font-size: small">
-                      20% Off On Annual Billing
-                    </div>
-                  </div>
-                  <div
-                    class="note mt-2 text-dark-emphasis"
-                    style="font-size: 14px"
-                  >
-                    All Features From Flowstack™, Plus Custom Integrations &
-                    Priority Support
-                  </div>
-                  <p
-                    class="text-dark"
-                    style="
-                      text-align: center;
-                      margin: 0.5rem 0;
-                      font-weight: 500;
-                      color: #6b7280;
-                    "
-                  >
-                    +
-                  </p>
-                  <div class="price text-success-custom fw-bold">
-                    GrowthLift™ -
-                    <span class="fw-bold growthLiftPrice">$4,999</span>/Month
-                  </div>
-                  <div class="note fst-italic" style="font-size: small">
-                    20% Off On Annual Billing
-                  </div>
-                  <div
-                    class="note mt-2 text-dark-emphasis"
-                    style="font-size: 14px"
-                  >
-                    Includes Full Performance Execution & Ads Management
-                  </div>
+          <div class="col-md-4 mb-5">
+            <div class="custom-faq">
+              <div class="p-md-5">
+                <div class="question p-5">
+                  <h2 class="fw-semibold">Is this just a chatbot?</h2>
                 </div>
-                <div
-                  class="accordion accordion-flush"
-                  id="accordionFlushExample"
-                >
-                  <div class="accordion-item">
-                    <h2
-                      class="accordion-header text-dark-emphasis m-auto"
-                      id="flush-headingTwo"
-                    >
-                      <button
-                        class="text-center collapsed fs-6 fw-semibold text-success-custom bg-transparent border-0"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseTwo"
-                      >
-                        More Details +
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseTwo"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="flush-headingOne"
-                      data-bs-parent="#accordionFlushExample"
-                    >
-                      <div class="accordion-body">
-                        <div class="feature-item card border-0 bg-transparent">
-                          <p
-                            class=""
-                            style="font-weight: 600; margin-bottom: 1rem"
-                          >
-                            Playground
-                          </p>
-                          <ul
-                            class=""
-                            style="list-style: none; padding-left: 0"
-                          >
-                            <li>Team Inbox & Multi-Agent Support</li>
-                            <li>Bulk Broadcasting</li>
-                            <li>AI Chatbots for Sales Automation</li>
-                            <li>WhatsApp Commerce & Shop Integration</li>
-                            <li>6000+ App Integrations</li>
-                            <li>GDPR-Compliant & Secure</li>
-                            <li>Advanced Performance Analytics</li>
-                            <li>Multilingual Support</li>
-                          </ul>
-                        </div>
-                        <div class="feature-item card border-0 bg-transparent">
-                          <p class="" style="font-weight: 600">Growth Layer</p>
-                          <ul
-                            class="text-start"
-                            style="list-style: none; padding-left: 0"
-                          >
-                            <li>Product catalog uploads & auto-sync</li>
-                            <li>Chatbot setup and optimization</li>
-                            <li>Broadcast flow design</li>
-                            <li>FAQ + product reply design</li>
-                            <li>Ongoing monthly improvements and support</li>
-                            <li>
-                              Meta (Click-to-WhatsApp) ads setup & management
-                            </li>
-                            <li>Weekly broadcast strategy & execution</li>
-                            <li>Campaign optimization</li>
-                            <li>Dedicated performance manager</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="answer p-5">
+                  <p class="fs-5">
+                    It’s more. You get broadcasts, inbox, AI replies, and full
+                    automation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-5">
+            <div class="custom-faq">
+              <div class="p-md-5">
+                <div class="question p-5">
+                  <h2 class="fw-semibold">Do I need to install anything?</h2>
+                </div>
+                <div class="answer p-5">
+                  <p class="fs-5">
+                    No coding. Just connect Shopify and WhatsApp in a few
+                    clicks.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-12">
-            <div style="text-align: center; margin-top: 2rem">
-              <a
-                href="https://wa.me/+971505052415"
-                class="btn btn-success-custom btn-lg d-inline-flex align-items-center justify-content-center gap-2 rounded-pill mb-3 fw-medium fs-6"
-              >
-                Attend AI Scale Audit™
+            <div class="p-md-5 pt-md-0 text-end">
+              <a href="#" class="btn custom-cta fs-5 p-5 pt-2 pb-2 fw-semibold">
+                Learn more
               </a>
-              <br />
-              <p class="text-muted fs-6 text-black-50">
-                Takes 2 minutes. No cards. No pressure.
-              </p>
-              <p class="text-muted text-start small">
-                The right plan (Flowstack™ or Pro) will be recommended after
-                your AI Scale Audit™, based on your automation needs, message
-                volume, team size, and sales goals. All subscriptions include
-                both the platform and execution layer. Standalone plans are not
-                available. Annual subscribers can cancel their plans anytime -
-                unused value will be refunded.
-              </p>
             </div>
           </div>
         </div>
       </div>
+      <div class="p-5"></div>
     </section>
 
-    <!-- Our Commitment Section -->
-    <section class="py-4 bg-primary-custom">
-      <div class="container p-4">
-        <div class="row gy-4 text-secondary">
-          <div class="col-12 mb-0">
-            <p class="text-success-custom fw-semibold text-center">
-              <span class="text-dark-emphasis fs-3 fw-semibold"
-                >What If You Don't Get Any Results?</span
-              ><br />
-              We Charge Based On Result And Value, Not Message Volume Or Seat
-              Count.
-            </p>
-
-            <p class="text-center text-dark-emphasis">
-              <span class="text-dark-emphasis fw-semibold">
-                Our Commitment:</span
-              >
-              If you're on an
-              <span class="fw-semibold">annual GrowthLift™ plan</span> and don’t
-              recover your investment within
-              <span class="fw-semibold">12 months,</span> we’ll
-              <span class="fw-semibold">refund</span> the unrecovered portion -
-              <span class="fw-semibold">up to 100%.</span> If you don’t achieve
-              at least
-              <span class="fw-semibold">3x ROI within 12 months,</span> we’ll
-              continue working for
-              <span class="fw-semibold">free until you do.</span> This guarantee
-              reflects our commitment to treating your brand as a long-term
-              growth partner - not just a monthly client. It also enables us to
-              allocate senior specialists, plan strategically, and focus on
-              delivering real business outcomes.
-            </p>
-            <p class="text-center fst-italic">
-              Most businesses begin seeing measurable results within 3–6 months
-              of consistent execution.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Enterprise Section -->
-    <section class="position-relative overflow-hidden py-5 bg-white">
-      <!-- Background Pattern -->
-      <div
-        class="position-absolute top-0 start-0 w-100 h-100 bg-pattern opacity-5"
-      ></div>
-
-      <div class="container position-relative">
-        <!-- Heading -->
-        <div class="text-center mb-5">
-          <div
-            class="d-inline-flex align-items-center bg-success-custom text-white rounded-pill px-4 py-2 mb-3 fw-bold"
-          >
-            <i class="fa-solid fa-crown me-2"></i> Flowstack Enterprise™
-          </div>
-          <h2 class="fw-bold text-dark-emphasis mb-3 fs-1">
-            Scale WhatsApp for
-            <span class="text-success-custom fw-bold">Enterprise</span>
-          </h2>
-          <p class="lead text-muted mx-auto fs-6">
-            Purpose-built for Fortune 500 companies, large enterprises, and
-            high-volume businesses requiring unlimited scale, premium support,
-            and custom integrations.
-          </p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-12 col-lg-3 position-relative">
-            <div
-              class="card bg-light-gradient shadow border border-success-soft rounded-4 p-4"
-            >
-              <div
-                class="d-flex justify-content-between align-items-start mb-3"
-              ></div>
-              <h5 class="fw-semibold mb-1 fs-6 text-dark-emphasis">
-                <i class="fa-solid fa-building text-success-custom me-1"></i>
-                Unlimited Everything
-              </h5>
-              <p class="text-muted small mb-0">
-                Unlimited agents, contacts, conversations, and integrations. No
-                caps, no restrictions.
-              </p>
-            </div>
-          </div>
-          <div class="col-12 col-lg-3 position-relative">
-            <div
-              class="card bg-light-gradient shadow border border-success-soft rounded-4 p-4"
-            >
-              <div
-                class="d-flex justify-content-between align-items-start mb-3"
-              ></div>
-              <h5 class="fw-semibold mb-1 fs-6 text-dark-emphasis">
-                <i
-                  class="fa-solid fa-shield-halved text-success-custom me-1"
-                ></i>
-                Enterprise Security
-              </h5>
-              <p class="text-muted small mb-0">
-                SOC 2 compliance, SSO integration, advanced encryption, and
-                dedicated infrastructure.
-              </p>
-            </div>
-          </div>
-          <div class="col-12 col-lg-3 position-relative">
-            <div
-              class="card bg-light-gradient shadow border border-success-soft rounded-4 p-4"
-            >
-              <div
-                class="d-flex justify-content-between align-items-start mb-3"
-              ></div>
-              <h5 class="fw-semibold mb-1 fs-6 text-dark-emphasis">
-                <i class="fa-solid fa-headset text-success-custom me-1"></i>
-                White-Glove Support
-              </h5>
-              <p class="text-muted small mb-0">
-                Dedicated account manager, 24/7 priority support, and custom
-                onboarding.
-              </p>
-            </div>
-          </div>
-          <div class="col-12 col-lg-3 position-relative mb-4">
-            <div
-              class="card bg-light-gradient shadow border border-success-soft rounded-4 p-4"
-            >
-              <div
-                class="d-flex justify-content-between align-items-start mb-3"
-              ></div>
-              <h5 class="fw-semibold mb-1 fs-6 text-dark-emphasis">
-                <i class="fa-solid fa-bolt me-1 text-success-custom"></i>
-                Custom Development
-              </h5>
-              <p class="text-muted small mb-0">
-                Bespoke integrations, custom workflows, and API development
-                tailored to your needs.
-              </p>
-            </div>
-          </div>
-          <div class="text-center w-100">
-            <a
-              href="https://wa.me/+971505052415"
-              class="btn btn-success-custom btn-lg d-inline-flex align-items-center justify-content-center gap-2 w-md-75 rounded-pill mb-5"
-            >
-              <span class="fw-medium fs-6">Schedule Enterprise Demo</span>
-              <i class="fa-solid fa-arrow-right fs-6"></i>
-            </a>
-            <p class="text-muted small mb-0 text-center">
-              Custom pricing • Dedicated setup • 30-day implementation
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="py-5 bg-primary-custom" id="faqs">
+    <!-- Start Turning -->
+    <section id="start-turning" class="bg-shaded-violet">
+      <div class="p-5"></div>
       <div class="container">
-        <div class="row" style="max-width: 900px; margin: auto">
-          <!-- Heading -->
-          <div class="text-center mb-5">
-            <h2 class="fw-bold text-dark-emphasis mb-3 fs-1">
-              Frequently Asked
-              <span class="text-success-custom fw-bold">Questions</span>
-            </h2>
-          </div>
-          <div class="accordion mb-5" id="accordionPanelsStayOpenExample">
-            <div class="accordion-item bg-transparent">
-              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                <button
-                  class="w-100 d-flex justify-content-between bg-transparent border-0 fs-6 fw-semibold text-dark-emphasis p-3"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseOne"
-                  aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseOne"
-                >
-                  What Exactly Is Watsale?
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseOne"
-                class="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingOne"
-              >
-                <div class="accordion-body text-dark-emphasis">
-                  Watsale is a ChatCommerce growth system that turns your
-                  WhatsApp into your store’s most profitable sales channel. It
-                  combines automation, AI-driven conversations, and done-for-you
-                  campaign execution, all built on your eCommerce data.
-                </div>
+        <div class="row">
+          <div class="col-md-6 mb-5 d-flex align-items-center">
+            <div class="">
+              <div class="heading" style="max-width: 400px">
+                <h2 class="fw-semibold" style="font-size: 55px">
+                  Start Turning Conversations Into Conversions
+                </h2>
               </div>
-            </div>
-            <div class="accordion-item bg-transparent">
-              <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                <button
-                  class="w-100 d-flex justify-content-between bg-transparent border-0 fs-6 fw-semibold text-dark-emphasis p-3"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="panelsStayOpen-collapseTwo"
-                >
-                  How Is Watsale Different From Whatsapp Marketing Tools?
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseTwo"
-                class="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingTwo"
-              >
-                <div class="accordion-body text-dark-emphasis">
-                  Most tools give you access. Watsale gives you results. We
-                  don’t just offer a platform - we deliver a full strategy,
-                  automation setup, campaign execution, and ROI tracking. Our
-                  system is fully managed and tailored to your store.
-                </div>
+              <div class="mb-4" style="max-width: 400px">
+                <p class="fs-5 fw-semibold">
+                  start converting on whatsapp - Attend AI powered consultation
+                  to understand which plan is best fit for you.
+                </p>
               </div>
-            </div>
-            <div class="accordion-item bg-transparent">
-              <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                <button
-                  class="w-100 d-flex justify-content-between bg-transparent border-0 fs-6 fw-semibold text-dark-emphasis p-3"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseThree"
-                  aria-expanded="false"
-                  aria-controls="panelsStayOpen-collapseThree"
-                >
-                  What Platforms Does Watsale Support?
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseThree"
-                class="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingThree"
-              >
-                <div class="accordion-body text-dark-emphasis">
-                  We natively support Shopify, WooCommerce, Ecwid, and custom
-                  stores. You can sync your catalog, track conversions, and
-                  automate chat flows without writing a line of code.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item bg-transparent">
-              <h2 class="accordion-header" id="panelsStayOpen-headingFour">
-                <button
-                  class="w-100 d-flex justify-content-between bg-transparent border-0 fs-6 fw-semibold text-dark-emphasis p-3"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseFour"
-                  aria-expanded="false"
-                  aria-controls="panelsStayOpen-collapseFour"
-                >
-                  Can I Use Watsale Without Technical Knowledge?
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseFour"
-                class="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingFour"
-              >
-                <div class="accordion-body text-dark-emphasis">
-                  Yes. You don’t need to set up anything yourself. Our team
-                  handles the entire deployment - including chatbot flows,
-                  campaign logic, automations, and reporting.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item bg-transparent">
-              <h2 class="accordion-header" id="panelsStayOpen-headingFive">
-                <button
-                  class="w-100 d-flex justify-content-between bg-transparent border-0 fs-6 fw-semibold text-dark-emphasis p-3"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseFive"
-                  aria-expanded="false"
-                  aria-controls="panelsStayOpen-collapseFive"
-                >
-                  How Do I Choose The Right Plan?
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseFive"
-                class="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingFive"
-              >
-                <div class="accordion-body text-dark-emphasis">
-                  You don’t have to. Just attend the AI Scale Audit™, and we’ll
-                  recommend the best-fit platform license and execution path
-                  based on your traffic, revenue, sales process, and growth
-                  goals.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item bg-transparent">
-              <h2 class="accordion-header" id="panelsStayOpen-headingSix">
-                <button
-                  class="w-100 d-flex justify-content-between bg-transparent border-0 fs-6 fw-semibold text-dark-emphasis p-3"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseSix"
-                  aria-expanded="false"
-                  aria-controls="panelsStayOpen-collapseSix"
-                >
-                  Can I Get Only The Platform Or Execution Service Separately?
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseSix"
-                class="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingSix"
-              >
-                <div class="accordion-body text-dark-emphasis">
-                  No, Watsale is a performance-driven system designed to work as
-                  a bundle - platform + execution. We don’t offer standalone
-                  subscriptions.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item bg-transparent">
-              <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
-                <button
-                  class="w-100 d-flex justify-content-between bg-transparent border-0 fs-6 fw-semibold text-dark-emphasis p-3"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseSeven"
-                  aria-expanded="false"
-                  aria-controls="panelsStayOpen-collapseSeven"
-                >
-                  How Long Does It Take To Start Seeing Results?
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseSeven"
-                class="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingSeven"
-              >
-                <div class="accordion-body text-dark-emphasis">
-                  Most brands begin seeing improvement in conversion rates,
-                  customer response, and campaign performance within 3–6 months
-                  of consistent use.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item bg-transparent">
-              <h2 class="accordion-header" id="panelsStayOpen-headingEight">
-                <button
-                  class="w-100 d-flex justify-content-between bg-transparent border-0 fs-6 fw-semibold text-dark-emphasis p-3"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseEight"
-                  aria-expanded="false"
-                  aria-controls="panelsStayOpen-collapseEight"
-                >
-                  What If I Don't Get Any Results?
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseEight"
-                class="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingEight"
-              >
-                <div class="accordion-body text-dark-emphasis">
-                  We offer a clear guarantee for annual GrowthLift™ subscribers:
-                  If you don’t recover your GrowthLift™ investment in 12 months,
-                  we’ll refund the uncovered portion. If you don’t reach 3x ROI,
-                  we’ll continue working for free until you do. <br />
-                  <br />
-                  <span class="small"
-                    >Our promise is built on performance - not contracts or
-                    vanity metrics.</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item bg-transparent">
-              <h2 class="accordion-header" id="panelsStayOpen-headingNine">
-                <button
-                  class="w-100 d-flex justify-content-between bg-transparent border-0 fs-6 fw-semibold text-dark-emphasis p-3"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseNine"
-                  aria-expanded="false"
-                  aria-controls="panelsStayOpen-collapseNine"
-                >
-                  Do You Offer Refunds If I Switch Plans Or Cancel?
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseNine"
-                class="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingNine"
-              >
-                <div class="accordion-body text-dark-emphasis">
-                  Yes. For annual subscribers, if you downgrade or cancel early,
-                  we’ll refund the unused portion of your subscription based on
-                  your billing cycle.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item bg-transparent">
-              <h2 class="accordion-header" id="panelsStayOpen-headingTen">
-                <button
-                  class="w-100 d-flex justify-content-between bg-transparent border-0 fs-6 fw-semibold text-dark-emphasis p-3"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseTen"
-                  aria-expanded="false"
-                  aria-controls="panelsStayOpen-collapseTen"
-                >
-                  Is This Available Worldwide?
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseTen"
-                class="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingTen"
-              >
-                <div class="accordion-body text-dark-emphasis">
-                  Currently, we work with brands across the GCC and MENA region.
-                  We also support international merchants with compatible
-                  infrastructure and team capacity.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="text-center w-100">
-            <p class="text-success-custom fs-5 fw-semibold mb-2 text-center">
-              Still Have Questions?
-            </p>
-            <p class="text-muted small mb-3 text-center">
-              Feel free to reach out via WhatsApp or attend the AI Scale Audit™
-              - we’ll walk you through everything, no pressure.
-            </p>
-            <a
-              href="https://wa.me/+971505052415"
-              class="btn btn-success-custom btn-lg d-inline-flex align-items-center justify-content-center gap-2 w-md-75 rounded-pill mb-3"
-            >
-              <span class="fw-medium fs-6">Start Your AI Scale Audit™</span>
-              <i class="fa-solid fa-arrow-right fs-6"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="bg-dark text-white py-5">
-      <div class="container">
-        <div class="row gy-4">
-          <!-- Brand Info -->
-          <div class="col-lg-6">
-            <img
-              src="./assets/img/white-logo.png"
-              alt="Watsale"
-              class="mb-3"
-              style="height: 32px"
-            />
-            <p class="text-light small mb-4" style="max-width: 480px">
-              Transform your WhatsApp into a high-converting sales channel.
-              Built for e-commerce brands ready to scale.
-            </p>
-            <div class="d-flex gap-3">
-              <a href="#" class="p-2" aria-label="WhatsApp">
-                <i class="fa-solid fa-message"></i>
-              </a>
-              <a href="#" class="p-2" aria-label="Email">
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-              <a href="#" class="p-2" aria-label="Phone">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Quick Links -->
-          <div class="col-sm-6 col-lg-3">
-            <h5 class="text-white fw-semibold mb-3">Quick Links</h5>
-            <ul class="list-unstyled small">
-              <li>
-                <a href="/#plans" class="d-block py-1">Plans & Pricing</a>
-              </li>
-              <li>
-                <a href="/#audit" class="d-block py-1">Audit Flow</a>
-              </li>
-              <li>
-                <a href="/#faqs" class="d-block py-1">FAQs</a>
-              </li>
-              <li>
-                <a href="#" class="d-block py-1">Case Studies</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Support -->
-          <div class="col-sm-6 col-lg-3">
-            <h5 class="text-white fw-semibold mb-3">Support</h5>
-            <ul class="list-unstyled small">
-              <li>
-                <a href="mailto:" class="d-block py-1">Help Center</a>
-              </li>
-              <li>
-                <a href="/#contact" class="d-block py-1">Contact Us</a>
-              </li>
-              <li>
-                <a href="#" class="d-block py-1">Book a Demo</a>
-              </li>
-              <li>
-                <a href="#" class="d-block py-1">Privacy Policy</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Footer Bottom -->
-        <div
-          class="border-top border-secondary-subtle mt-5 pt-4 text-center text-sm-start"
-        >
-          <div class="row justify-content-between">
-            <div class="col-md-auto">
-              <p class="text-white-50 small mb-2 mb-md-0 fw-light">
-                © 2025 Watsale. All Rights Reserved. Powered By
+              <div class="">
                 <a
-                  target="_blank"
-                  href="https://webzolve.com/"
-                  class="text-decoration-none text-white-50 fw-light"
-                  >Webzolve</a
+                  href="#"
+                  class="btn custom-cta fs-5 p-5 pt-2 pb-2 fw-semibold"
                 >
-              </p>
+                  Start AI Consultation
+                </a>
+              </div>
             </div>
-            <div class="col-md-auto">
-              <p class="text-white-50 small mb-0 fw-light">
-                WhatsApp Business API • Built for Scale • ROI Guaranteed
-              </p>
+          </div>
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="card">
+              <img
+                src="./assets/img/placeholder.webp"
+                alt=""
+                class="img-fluid"
+              />
             </div>
           </div>
         </div>
       </div>
-    </footer>
+      <div class="p-5"></div>
+    </section>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
