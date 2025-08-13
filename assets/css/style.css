@@ -1,7 +1,7 @@
 :root {
   --custom-primary: #6f5bf5;
   --custom-secondary: #6f5af6;
-  --bg-shaded-violet: #eccbf5;
+  --bg-shaded-violet: #d8d2fc;
 }
 
 .custom-primary-text {
@@ -29,14 +29,14 @@
 .custom-cta {
   border: black 3px solid;
   border-radius: 15px;
-  background-color: white;
-  color: black;
+  background-color: var(--custom-primary);
+  color: white;
 }
 .custom-cta:hover {
   border: black 3px solid;
   border-radius: 15px;
-  background-color: white;
-  color: black;
+  background-color: var(--custom-primary);
+  color: white;
 }
 
 /* how you'll win */
@@ -66,16 +66,17 @@
 }
 
 #everything .custom-cta {
-  background-color: var(--bg-shaded-violet);
   bottom: -20px;
 }
 
 /* faq */
 .custom-faq .question {
   border: black 3px solid;
+  color: white;
   border-radius: 15px;
-  background-color: var(--bg-shaded-violet);
-  height: 300px;
+  background-color: var(--custom-primary);
+  height: 400px;
+  text-align: center;
 }
 
 .custom-faq .answer {
@@ -83,9 +84,5 @@
   border-radius: 15px;
   background: white;
   margin-top: -100px;
-  height: 300px;
-}
-
-#faq .custom-cta {
-  background-color: var(--bg-shaded-violet);
+  /* height: max-content; */
 }
