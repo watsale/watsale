@@ -25,15 +25,41 @@
   height: max-content;
   background-color: var(--bg-shaded-violet);
 }
+:root {
+  --custom-primary: #6f5bf5;
+  --custom-secondary: #6f5af6;
+  --bg-shaded-violet: #d8d2fc;
+}
+
+.custom-primary-text {
+  color: var(--custom-primary);
+}
+.custom-secondary-text {
+  color: var(--custom-secondary);
+}
+.custom-primary-bg {
+  background-color: var(--custom-primary);
+}
+.custom-secondary-bg {
+  background-color: var(--custom-secondary);
+}
+.bg-shaded-violet {
+  background-color: var(--bg-shaded-violet);
+}
+
+/* hero section */
+#hero {
+  height: max-content;
+  background-color: var(--bg-shaded-violet);
+}
 
 .custom-cta {
-  border: black 3px solid;
+  border: none;
   border-radius: 15px;
   background-color: var(--custom-primary);
   color: white;
 }
 .custom-cta:hover {
-  border: black 3px solid;
   border-radius: 15px;
   background-color: var(--custom-primary);
   color: white;
@@ -93,4 +119,60 @@ footer a {
 }
 footer a:hover {
   color: var(--custom-primary);
+}
+
+/* Navbar tweaks */
+.navbar {
+  backdrop-filter: blur(4px);
+}
+
+/* Remove outline from hamburger button */
+.navbar .navbar-toggler:focus,
+.navbar .navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem 1rem;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--custom-primary);
+}
+
+.btn.custom-cta {
+  /* border: black 3px solid; */
+  border-radius: 15px;
+  background-color: var(--custom-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.btn.btn-outline-dark {
+  border-radius: 12px;
+  padding: 0.45rem 0.9rem;
+}
+
+/* Ensure centered nav links on large screens */
+@media (min-width: 992px) {
+  .navbar .navbar-collapse {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Keep auth section to the right while links remain centered */
+  .navbar .d-flex.align-items-center {
+    margin-left: auto;
+  }
+}
+
+/* Mobile: make collapsed auth buttons full width */
+@media (max-width: 991px) {
+  .navbar .d-lg-none .btn {
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+  }
 }
