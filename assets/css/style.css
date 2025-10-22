@@ -65,16 +65,6 @@
   color: white;
 }
 
-/* how you'll win */
-.how-card > .card-image img {
-  border: black 3px solid;
-  border-radius: 15px;
-  object-fit: cover;
-  padding: 0;
-  height: 180px;
-  width: 100%;
-}
-
 /* watsale journey */
 .side-title {
   border: black 3px solid;
