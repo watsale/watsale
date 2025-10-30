@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watsale | Home</title>
+
+    <link
+      rel="shortcut icon"
+      href="/assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
+      integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- FontAwesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light-subtle shadow-sm fixed-top"
+    >
+      <div class="container d-flex align-items-center">
+        <!-- Brand Logo (left) -->
+        <a class="navbar-brand me-0 me-lg-3" href="index.html">
+          <img src="./assets/img/logo.webp" alt="Logo" width="140" />
+        </a>
+
+        <!-- Hamburger Button -->
+        <button
+          class="navbar-toggler ms-auto border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCentered"
+          aria-controls="navbarCentered"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Centered nav links and right auth buttons -->
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarCentered"
+        >
+          <ul class="navbar-nav mx-auto text-center align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="features.html"
+                ><i class="bi bi-lightning-charge"></i> Features</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-currency-dollar"></i> Pricing</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#native-integrations"
+                ><i class="bi bi-plug"></i> Integrations</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://wa.me/+971505052415"
+                target="_blank"
+                ><i class="bi bi-telephone-plus"></i> Contact</a
+              >
+            </li>
+          </ul>
+
+          <!-- Auth buttons on the right for large screens; inside collapse for small screens -->
+          <div class="d-flex align-items-center ms-lg-3">
+            <a
+              href="https://panel.watsale.com/login"
+              target="_blank"
+              class="me-3 d-none d-lg-inline nav-link"
+              ><i class="bi bi-box-arrow-in-right"></i> Login</a
+            >
+            <a
+              href="https://panel.watsale.com/signup"
+              target="_blank"
+              class="btn custom-cta d-none d-lg-inline"
+              ><i class="bi bi-rocket-takeoff"></i> Sign Up</a
+            >
+
+            <!-- On mobile show primary auth links inside the collapsed menu -->
+            <div class="d-lg-none w-100 text-center mt-2">
+              <a
+                href="https://panel.watsale.com/login"
+                target="_blank"
+                class="nav-link"
+                ><i class="bi bi-box-arrow-in-right"></i> Login</a
+              >
+              <a
+                href="https://panel.watsale.com/signup"
+                target="_blank"
+                class="btn custom-cta w-100 mt-4"
+                ><i class="bi bi-rocket-takeoff"></i> Sign Up</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Features -->
+    <section id="features" class="bg-light">
+      <div class="p-5"></div>
+      <div class="p-3"></div>
+      <div class="container">
+        <div class="heading d-flex flex-column align-items-center mb-5">
+          <h2 class="fs-1 fw-bolder custom-primary-text text-center">
+            Transparent Pricing for Your <br />
+            Business Needs
+          </h2>
+          <p class="fs-5 text-black-50 text-center" style="max-width: 600px">
+            Choose the plan that best fits your WhatsApp marketing strategy
+          </p>
+        </div>
+
+        <div class="row ps-5 pe-5 justify-content-around">
+          <div class="col-md-4 mb-5">
+            <div class="card p-3 rounded-4 shadow-sm bg-white price-card mb-5">
+              <div class="card-body">
+                <h3 class="fs-4 fw-bold">Flowstack</h3>
+                <h4 class="fs-2 fw-bolder mt-3 mb-3 custom-primary-text">
+                  AED 499 <span class="fs-6 fw-normal">/ Month</span>
+                </h4>
+                <p class="fs-6 text-dark">Billed Annually</p>
+                <ul class="list-unstyled">
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Up to 20 team inbox users</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Up to 100,000 customer profiles</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Up to 50,000 chats/month</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Up to 20 automation flows</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>WhatsApp Commerce</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>In-chat payments (Stripe, Razorpay, Tap, etc.)</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>WhatsApp Bulk Broadcast Campaigns</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Shopify / WooCommerce / Ecwid integrations</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Google Sheets CRM sync</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Support booking via WhatsApp</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Fb/ ChatGPT-based smart replies</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Basic voice assistant (optional)</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Standard support</span>
+                  </li>
+                </ul>
+                <div class="d-grid mt-4">
+                  <a
+                    href="https://panel.watsale.com/signup"
+                    target="_blank"
+                    class="btn custom-cta"
+                    >Get Started</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-5">
+            <div class="card p-3 rounded-4 shadow-sm bg-white price-card mb-5">
+              <div class="card-body">
+                <h3 class="fs-4 fw-bold">Flowstack Pro</h3>
+                <h4 class="fs-2 fw-bolder mt-3 mb-3 custom-primary-text">
+                  AED 999 <span class="fs-6 fw-normal">/ Month</span>
+                </h4>
+                <p class="fs-6 text-dark">Billed Annually</p>
+                <ul class="list-unstyled">
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Up to 100 team inbox users</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Up to 500,000 customer profiles</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Up to 100,000 chats/month</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Up to 100 automation flows</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Advanced segmentation & retargeting</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span
+                      >AI agent (voice + text) trained on your business</span
+                    >
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Loyalty flows, upsells & remarketing</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Meta Lead Ad Automation &CTWA Support</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Enhanced CRM + webhook support</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Done for you service on Chatbots&AI Agents</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Custom integration support</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Priority support via WhatsApp</span>
+                  </li>
+                </ul>
+                <div class="d-grid mt-4">
+                  <a
+                    href="https://panel.watsale.com/signup"
+                    target="_blank"
+                    class="btn custom-cta"
+                    >Get Started</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-5">
+            <div class="card p-3 rounded-4 shadow-sm bg-white price-card mb-5">
+              <div class="card-body">
+                <h3 class="fs-4 fw-bold">Flowstack Enterprise</h3>
+                <h4 class="fs-2 fw-bolder mt-3 mb-3 custom-primary-text">
+                  Custom Pricing
+                </h4>
+                <p class="fs-6 text-dark">Billed Annually</p>
+                <ul class="list-unstyled">
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Customized team inbox</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Customized customer profiles</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Customized chats/month</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Automation flows</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Advanced segmentation & retargeting</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span
+                      >AI agent (voice + text) trained on your business</span
+                    >
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Loyalty flows, upsells & remarketing</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Meta Lead Ad Automation & CTWA Support</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Enhanced CRM + webhook support</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Done for you service on Chatbots & AI Agents</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Custom integration support</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <i class="bi bi-check-lg custom-primary-text"></i>
+                    <span>Dedicated premium support</span>
+                  </li>
+                </ul>
+                <div class="d-grid mt-4">
+                  <a
+                    href="https://panel.watsale.com/signup"
+                    target="_blank"
+                    class="btn custom-cta"
+                    >Get Started</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col text-center">
+            <p class="text-black-50">
+              Need a custom plan?
+              <a href="https://wa.me/+971505052415" target="_blank"
+                >Contact Us</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="p-5"></div>
+    </section>
+
+    <section class="bg-light-subtle" id="faqs">
+      <div class="p-5"></div>
+      <div class="container text-center">
+        <h2 class="fs-1 fw-bolder custom-primary-text mb-5">
+          Frequently Asked Questions
+        </h2>
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center">
+            <div class="accordion accordion-flush w-75" id="faqsAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faq1Heading">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq1"
+                    aria-expanded="false"
+                    aria-controls="faq1"
+                  >
+                    Does watsale help in setting up the account after purchase?
+                  </button>
+                </h2>
+                <div
+                  id="faq1"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faq1Heading"
+                  data-bs-parent="#faqsAccordion"
+                >
+                  <div class="accordion-body text-start">
+                    Yes, we at watsale are prepared to help setup your account
+                    and give you a quick tour of the product. We offer chatbot
+                    building service exclusively for the enterprise package.
+                    However, you can watch tutorial videos and set it up without
+                    any technical knowledge.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faq2Heading">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq2"
+                    aria-expanded="false"
+                    aria-controls="faq2"
+                  >
+                    What are the free conversations mentioned in all plans?
+                  </button>
+                </h2>
+                <div
+                  id="faq2"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faq2Heading"
+                  data-bs-parent="#faqsAccordion"
+                >
+                  <div class="accordion-body text-start">
+                    Meta provides 1000 free customer-initiated conversations
+                    monthly. Additional usage and business-initiated
+                    conversation charges apply based on country and pre-approved
+                    template category.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faq3Heading">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq3"
+                    aria-expanded="false"
+                    aria-controls="faq3"
+                  >
+                    What are active contacts in the pricing plans?
+                  </button>
+                </h2>
+                <div
+                  id="faq3"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faq3Heading"
+                  data-bs-parent="#faqsAccordion"
+                >
+                  <div class="accordion-body text-start">
+                    Active contacts refer to the number of unique contacts
+                    engaged in a chat conversation in a month.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faq4Heading">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq4"
+                    aria-expanded="false"
+                    aria-controls="faq4"
+                  >
+                    What is a user agent in the pricing plans?
+                  </button>
+                </h2>
+                <div
+                  id="faq4"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faq4Heading"
+                  data-bs-parent="#faqsAccordion"
+                >
+                  <div class="accordion-body text-start">
+                    A user agent refers to a customer service representative or
+                    an individual who operates the chatbot and communicates with
+                    customers through it. Using watsale, chat conversations can
+                    be assigned to multiple agents like a tele-calling system.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faq5Heading">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq5"
+                    aria-expanded="false"
+                    aria-controls="faq5"
+                  >
+                    What is the WhatsApp eCommerce bot?
+                  </button>
+                </h2>
+                <div
+                  id="faq5"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faq5Heading"
+                  data-bs-parent="#faqsAccordion"
+                >
+                  <div class="accordion-body text-start">
+                    The eCommerce bot in watsale is a specialized chatbot
+                    integrated with WhatsApp catalog. It enables a fully
+                    automated e-commerce process, from placing an order to
+                    completing the payment. This chatbot can be further
+                    developed with features such as delivery slots, delivery
+                    locations, order follow-up, and more, making it a simple and
+                    easy-to-use solution for businesses of all types. It can be
+                    integrated with Shopify, WooCommerce or any custom eCommerce
+                    platform.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-5"></div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Brand Info -->
+          <div class="col-lg-6">
+            <img
+              src="./assets/img/logo-white.webp"
+              alt="Watsale"
+              class="mb-3"
+              style="height: 32px"
+            />
+            <p class="text-light small mb-4" style="max-width: 480px">
+              Transform your WhatsApp into a high-converting sales channel.
+              Built for e-commerce brands ready to scale.
+            </p>
+            <div class="d-flex gap-3">
+              <a
+                href="https://wa.me/+971505052415"
+                target="_blank"
+                class="p-2"
+                aria-label="WhatsApp"
+              >
+                <i class="fa-solid fa-message"></i>
+              </a>
+              <a
+                href="mailto:support@watsale.com"
+                class="p-2"
+                aria-label="Email"
+              >
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a href="tel:+971505052415" class="p-2" aria-label="Phone">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-sm-6 col-lg-3">
+            <h5 class="custom-primary-text fw-semibold mb-3">Quick Links</h5>
+            <ul class="list-unstyled small">
+              <li>
+                <a href="/#plans" class="d-block py-1">Plans & Pricing</a>
+              </li>
+              <li>
+                <a href="/#audit" class="d-block py-1">Audit Flow</a>
+              </li>
+              <li>
+                <a href="/#faqs" class="d-block py-1">FAQs</a>
+              </li>
+              <li>
+                <a href="#" class="d-block py-1">Case Studies</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Support -->
+          <div class="col-sm-6 col-lg-3">
+            <h5 class="custom-primary-text fw-semibold mb-3">Support</h5>
+            <ul class="list-unstyled small">
+              <li>
+                <a href="mailto:support@watsale.com" class="d-block py-1"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/+971505052415"
+                  target="_blank"
+                  class="d-block py-1"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/+971505052415"
+                  target="_blank"
+                  class="d-block py-1"
+                  >Book a Demo</a
+                >
+              </li>
+              <li>
+                <a href="#" class="d-block py-1">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div
+          class="border-top border-secondary-subtle mt-5 pt-4 text-center text-sm-start"
+        >
+          <div class="row justify-content-between">
+            <div class="col-md-auto">
+              <p class="text-white-50 small mb-2 mb-md-0 fw-light">
+                © 2025 Watsale. All Rights Reserved. Powered By
+                <a
+                  target="_blank"
+                  href="https://webzolve.com/"
+                  class="text-decoration-none text-white-50 fw-light"
+                  >Webzolve</a
+                >
+              </p>
+            </div>
+            <div class="col-md-auto">
+              <p class="text-white-50 small mb-0 fw-light">
+                WhatsApp Business API • Built for Scale • ROI Guaranteed
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

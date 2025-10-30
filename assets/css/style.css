@@ -166,3 +166,14 @@ footer a:hover {
     border-radius: 12px;
   }
 }
+
+/* Price card */
+.price-card {
+  border-top: 10px solid var(--custom-primary) !important;
+  border: var(--custom-primary) 1px solid;
+  transition: transform 0.3s ease-in-out;
+}
+.price-card:hover {
+  transform: scale(1.01);
+  transition: transform 0.3s ease-in-out;
+}
